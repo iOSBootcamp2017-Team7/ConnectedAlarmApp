@@ -35,3 +35,4 @@ App to connect and motivate each other to wake up early...
 
 - [ ] Pro/paid version
 - [ ] Support Android
+# test Comments
