@@ -1,10 +1,7 @@
 # ConnectedAlarmApp
-iOS alarm app 
+iOS alarm app to connect and motivate each other to wake up early...
 
-# Description 
-App to connect and motivate each other to wake up early...
-
-# Required Stories
+## Required Stories
 
 - [ ] Ability to create shared alarm challenge
   - [ ] Duration
@@ -21,7 +18,7 @@ App to connect and motivate each other to wake up early...
   - [ ] or, OAuth to identify user
 - [ ] Backend server to implement the connected logic
 
-# Optional Stories
+## Optional Stories
 
 - [ ] Ability to access your contacts and send SMS with invite
   - [ ] Ability to identify the list of contacts who has this app
@@ -31,7 +28,7 @@ App to connect and motivate each other to wake up early...
 - [ ] Weekly / Monthly report on your progress
 - [ ] Ads catering the purpose of the shared alarm
 
-# If successful?
+## If successful?
 
 - [ ] Pro/paid version
 - [ ] Support Android
