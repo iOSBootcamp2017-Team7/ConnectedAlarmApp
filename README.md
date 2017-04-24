@@ -5,6 +5,8 @@ iOS alarm app to connect and motivate each other to wake up early...
 
 https://github.com/iOSBootcamp2017-Team7/ConnectedAlarmApp/blob/master/Wireframes%20-%20Connected%20Alarm%20App.pdf
 
+![](./ConnectedAlarmApp.gif)
+
 ### Required Stories
 
 - [ ] Ability to create shared alarm challenge
