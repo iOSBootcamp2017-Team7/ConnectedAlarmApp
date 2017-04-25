@@ -15,6 +15,7 @@
 		9E8463C81EAFA6F000EB8BF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E8463C61EAFA6F000EB8BF1 /* LaunchScreen.storyboard */; };
 		9E8463D31EAFA6F000EB8BF1 /* ConnectedAlarmAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8463D21EAFA6F000EB8BF1 /* ConnectedAlarmAppTests.swift */; };
 		9E8463DE1EAFA6F000EB8BF1 /* ConnectedAlarmAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8463DD1EAFA6F000EB8BF1 /* ConnectedAlarmAppUITests.swift */; };
+		9EAB7A8F1EAFAB24003F9F9A /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB7A8E1EAFAB24003F9F9A /* AppConstants.swift */; };
 		BD240BDDAB5AFB11F993C20C /* Pods_ConnectedAlarmAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494892B055D9C312C2ABE015 /* Pods_ConnectedAlarmAppUITests.framework */; };
 		C206BF870BF0C334DB4A4A58 /* Pods_ConnectedAlarmAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58A2C55749A3E1871BDC489B /* Pods_ConnectedAlarmAppTests.framework */; };
 		F1B8C378843D0BAA81660673 /* Pods_ConnectedAlarmApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F28A6F42E5033F26CCBC1A7 /* Pods_ConnectedAlarmApp.framework */; };
@@ -57,6 +58,7 @@
 		9E8463D91EAFA6F000EB8BF1 /* ConnectedAlarmAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConnectedAlarmAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E8463DD1EAFA6F000EB8BF1 /* ConnectedAlarmAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectedAlarmAppUITests.swift; sourceTree = "<group>"; };
 		9E8463DF1EAFA6F000EB8BF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EAB7A8E1EAFAB24003F9F9A /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		9F28A6F42E5033F26CCBC1A7 /* Pods_ConnectedAlarmApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConnectedAlarmApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6866A08F4F81D1A5F453468 /* Pods-ConnectedAlarmAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConnectedAlarmAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConnectedAlarmAppTests/Pods-ConnectedAlarmAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		FB533E80AB4E13143D210C14 /* Pods-ConnectedAlarmApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConnectedAlarmApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConnectedAlarmApp/Pods-ConnectedAlarmApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -129,8 +131,12 @@
 		9E8463B91EAFA6F000EB8BF1 /* ConnectedAlarmApp */ = {
 			isa = PBXGroup;
 			children = (
+				9EAB7A8D1EAFAADB003F9F9A /* Constants */,
+				9EAB7A901EAFB5CA003F9F9A /* Controllers */,
+				9EAB7A921EAFB5E9003F9F9A /* Models */,
+				9EAB7A931EAFB652003F9F9A /* Utils */,
+				9EAB7A911EAFB5DB003F9F9A /* Views */,
 				9E8463BA1EAFA6F000EB8BF1 /* AppDelegate.swift */,
-				9E8463BC1EAFA6F000EB8BF1 /* ViewController.swift */,
 				9E8463BE1EAFA6F000EB8BF1 /* Main.storyboard */,
 				9E8463C41EAFA6F000EB8BF1 /* Assets.xcassets */,
 				9E8463C61EAFA6F000EB8BF1 /* LaunchScreen.storyboard */,
@@ -156,6 +162,43 @@
 				9E8463DF1EAFA6F000EB8BF1 /* Info.plist */,
 			);
 			path = ConnectedAlarmAppUITests;
+			sourceTree = "<group>";
+		};
+		9EAB7A8D1EAFAADB003F9F9A /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				9EAB7A8E1EAFAB24003F9F9A /* AppConstants.swift */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		9EAB7A901EAFB5CA003F9F9A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9E8463BC1EAFA6F000EB8BF1 /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		9EAB7A911EAFB5DB003F9F9A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		9EAB7A921EAFB5E9003F9F9A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		9EAB7A931EAFB652003F9F9A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		B47A2EBC692F772CC0E48A3B /* Frameworks */ = {
@@ -455,6 +498,7 @@
 				9E8463BD1EAFA6F000EB8BF1 /* ViewController.swift in Sources */,
 				9E8463BB1EAFA6F000EB8BF1 /* AppDelegate.swift in Sources */,
 				9E8463C31EAFA6F000EB8BF1 /* ConnectedAlarmApp.xcdatamodeld in Sources */,
+				9EAB7A8F1EAFAB24003F9F9A /* AppConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,6 +757,7 @@
 				9E8463E41EAFA6F000EB8BF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9E8463E51EAFA6F000EB8BF1 /* Build configuration list for PBXNativeTarget "ConnectedAlarmAppTests" */ = {
 			isa = XCConfigurationList;
@@ -721,6 +766,7 @@
 				9E8463E71EAFA6F000EB8BF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9E8463E81EAFA6F000EB8BF1 /* Build configuration list for PBXNativeTarget "ConnectedAlarmAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -729,6 +775,7 @@
 				9E8463EA1EAFA6F000EB8BF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
