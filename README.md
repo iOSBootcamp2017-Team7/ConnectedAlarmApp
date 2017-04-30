@@ -84,6 +84,6 @@ https://github.com/iOSBootcamp2017-Team7/ConnectedAlarmApp/blob/master/Wireframe
 - What will your final demo look like?
   - Describe the flow of your final demo
 - What mobile features do you leverage?
-  - We are going to use motion sensor or camera to force user's get up and detect the actual get up time
+    - We are going to use motion sensor or camera to force user's get up and detect the actual get up time
 - What are your technical concerns?
-  - If the users go back to sleep after alarm and even if they finish the mandatory steps, how to find it out if this happens.
+    - If the users go back to sleep after alarm and even if they finish the mandatory steps, how to find it out if this happens.
