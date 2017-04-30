@@ -79,6 +79,7 @@ https://github.com/iOSBootcamp2017-Team7/ConnectedAlarmApp/blob/master/Wireframe
   - What screens will each user see?
     - The app has three tabs which is 'Alarm','Challenge', 'Trophy'
     - Alarm screen has private alarm setup for user, they can swipe to left or right to see previous or future days' alarms
+        </br>
         <img src='http://i.imgur.com/ONPKpHa.png' title='Alarm screen' width='25%' height='25%'/>
     - Challenge screen is showing current challenge or add a new challenge by set up alarm and inviting friends
         </br>
