@@ -78,9 +78,16 @@ https://github.com/iOSBootcamp2017-Team7/ConnectedAlarmApp/blob/master/Wireframe
     - Group challenge, a group of people who can set a competition with shared alarm, they can compete each other with actual wake up time and showing the score with a leaderboard
   - What screens will each user see?
     - The app has three tabs which is 'Alarm','Challenge', 'Trophy'
-    - Alarm screen has private alarm setup for user
+    - Alarm screen has private alarm setup for user, they can swipe to left or right to see previous or future days' alarms
+    <img src='http://i.imgur.com/ONPKpHa.png' title='Alarm screen' width=''/>
     - Challenge screen is showing current challenge or add a new challenge by set up alarm and inviting friends
+    <img src='http://i.imgur.com/WqfAae2.png' title='Challenge screen 1' width=''/>
+    <img src='http://i.imgur.com/A9tDPAq.png' title='Challenge screen 2' width=''/>
+    <img src='http://i.imgur.com/f3OCgPI.png' title='Challenge screen 3' width=''/>
+    <img src='http://i.imgur.com/09cPPIX.png' title='Challenge screen 4' width=''/>
     - Showing current trophies that user have already get
+    <img src='http://i.imgur.com/kSsV5uw.png' title='Trophy screen' width=''/>
+
 - What will your final demo look like?
   - Describe the flow of your final demo
 - What mobile features do you leverage?
