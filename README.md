@@ -81,12 +81,12 @@ https://github.com/iOSBootcamp2017-Team7/ConnectedAlarmApp/blob/master/Wireframe
     - Alarm screen has private alarm setup for user, they can swipe to left or right to see previous or future days' alarms
     <img src='http://i.imgur.com/ONPKpHa.png' title='Alarm screen' width=''/>
     - Challenge screen is showing current challenge or add a new challenge by set up alarm and inviting friends
-    <img src='http://i.imgur.com/WqfAae2.png' title='Challenge screen 1' width=''/>
-    <img src='http://i.imgur.com/A9tDPAq.png' title='Challenge screen 2' width=''/>
-    <img src='http://i.imgur.com/f3OCgPI.png' title='Challenge screen 3' width=''/>
-    <img src='http://i.imgur.com/09cPPIX.png' title='Challenge screen 4' width=''/>
+    <img src='http://i.imgur.com/WqfAae2.png' title='Challenge screen 1' width='50%' height='50%'/>
+    <img src='http://i.imgur.com/A9tDPAq.png' title='Challenge screen 2' width='50%' height='50%'/>
+    <img src='http://i.imgur.com/f3OCgPI.png' title='Challenge screen 3' width='50%' height='50%'/>
+    <img src='http://i.imgur.com/09cPPIX.png' title='Challenge screen 4' width='50%' height='50%'/>
     - Showing current trophies that user have already get
-    <img src='http://i.imgur.com/kSsV5uw.png' title='Trophy screen' width=''/>
+    <img src='http://i.imgur.com/kSsV5uw.png' title='Trophy screen' width='50%' height='50%'/>
 
 - What will your final demo look like?
   - Describe the flow of your final demo
