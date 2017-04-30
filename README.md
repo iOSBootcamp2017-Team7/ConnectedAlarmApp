@@ -34,7 +34,7 @@ https://github.com/iOSBootcamp2017-Team7/ConnectedAlarmApp/blob/master/Wireframe
 - [ ] Add reward system / ranking system
   - [ ] Badge system
 - [ ] Make the challenge public
-- [ ] Ability to join a public alarm challenge 
+- [ ] Ability to join a public alarm challenge
 - [ ] Ability to track/input what you did after wake up?
 
 ### If successful?
@@ -64,16 +64,26 @@ https://github.com/iOSBootcamp2017-Team7/ConnectedAlarmApp/blob/master/Wireframe
 
 - What is your product pitch?
   - Start with a problem statement and follow up with a solution.
+    - People who would like to wake up early in the morning but always fail it.
+    - This ConnectedAlarmApp is trying connect people and compete with each other so that it can inspire people get up early as they planned
   - Focus on engaging your audience with a relatable need.
 - Who are the key stakeholders for this app?
   - Who will be using this?
+    - Anyone who is trying to get up early and being disciplined
   - What will they be using this for?
+    - Etc, work out in the morning or being more proactive
 - What are the core flows?
   - What are the key functions?
+    - Private alarm, set alarms only for self using and not visible to friends
+    - Group challenge, a group of people who can set a competition with shared alarm, they can compete each other with actual wake up time and showing the score with a leaderboard
   - What screens will each user see?
+    - The app has three tabs which is 'Alarm','Challenge', 'Trophy'
+    - Alarm screen has private alarm setup for user
+    - Challenge screen is showing current challenge or add a new challenge by set up alarm and inviting friends
+    - Showing current trophies that user have already get
 - What will your final demo look like?
   - Describe the flow of your final demo
 - What mobile features do you leverage?
-  - Leverage at least two mobile-oriented features i.e maps and camera
+  - We are going to use motion sensor or camera to force user's get up and detect the actual get up time
 - What are your technical concerns?
-  - What technical features do you need help or resources for?
+  - If the users go back to sleep after alarm and even if they finish the mandatory steps, how to find it out if this happens.
