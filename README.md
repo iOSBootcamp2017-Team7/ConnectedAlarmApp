@@ -79,14 +79,14 @@ https://github.com/iOSBootcamp2017-Team7/ConnectedAlarmApp/blob/master/Wireframe
   - What screens will each user see?
     - The app has three tabs which is 'Alarm','Challenge', 'Trophy'
     - Alarm screen has private alarm setup for user, they can swipe to left or right to see previous or future days' alarms
-    <img src='http://i.imgur.com/ONPKpHa.png' title='Alarm screen' width=''/>
+    <img src='http://i.imgur.com/ONPKpHa.png' title='Alarm screen' width='30%' height='30%'/>
     - Challenge screen is showing current challenge or add a new challenge by set up alarm and inviting friends
-    <img src='http://i.imgur.com/WqfAae2.png' title='Challenge screen 1' width='50%' height='50%'/>
-    <img src='http://i.imgur.com/A9tDPAq.png' title='Challenge screen 2' width='50%' height='50%'/>
-    <img src='http://i.imgur.com/f3OCgPI.png' title='Challenge screen 3' width='50%' height='50%'/>
-    <img src='http://i.imgur.com/09cPPIX.png' title='Challenge screen 4' width='50%' height='50%'/>
+    <img src='http://i.imgur.com/WqfAae2.png' title='Challenge screen 1' width='30%' height='30%'/>
+    <img src='http://i.imgur.com/A9tDPAq.png' title='Challenge screen 2' width='30%' height='30%'/>
+    <img src='http://i.imgur.com/f3OCgPI.png' title='Challenge screen 3' width='30%' height='30%'/>
+    <img src='http://i.imgur.com/09cPPIX.png' title='Challenge screen 4' width='30%' height='30%'/>
     - Showing current trophies that user have already get
-    <img src='http://i.imgur.com/kSsV5uw.png' title='Trophy screen' width='50%' height='50%'/>
+    <img src='http://i.imgur.com/kSsV5uw.png' title='Trophy screen' width='30%' height='30%'/>
 
 - What will your final demo look like?
   - Describe the flow of your final demo
