@@ -1,6 +1,11 @@
 # ConnectedAlarmApp
 iOS alarm app to connect and motivate each other to wake up early...
 
+### Sprint 1
+
+![](./ConnectedAlarmApp-Sprint1.gif)
+
+
 ### Wireframes
 
 https://github.com/iOSBootcamp2017-Team7/ConnectedAlarmApp/blob/master/Wireframes%20-%20Connected%20Alarm%20App.pdf
