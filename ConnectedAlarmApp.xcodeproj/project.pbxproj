@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9787C5961EB6ECCC00D8D482 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9787C5951EB6ECCC00D8D482 /* ActivityViewController.swift */; };
+		9787C5981EB6EEE700D8D482 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9787C5971EB6EEE700D8D482 /* ChallengeViewController.swift */; };
+		9787C59A1EB6EEF000D8D482 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9787C5991EB6EEF000D8D482 /* SetupViewController.swift */; };
+		9787C59C1EB6EEF900D8D482 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9787C59B1EB6EEF900D8D482 /* LeaderboardViewController.swift */; };
+		9787C59E1EB6EFC200D8D482 /* InviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9787C59D1EB6EFC200D8D482 /* InviteViewController.swift */; };
+		9787C5A01EB6EFD000D8D482 /* AchievementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9787C59F1EB6EFD000D8D482 /* AchievementsViewController.swift */; };
+		9787C5A21EB7022200D8D482 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9787C5A11EB7022200D8D482 /* CustomCell.swift */; };
 		9E8463BB1EAFA6F000EB8BF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8463BA1EAFA6F000EB8BF1 /* AppDelegate.swift */; };
-		9E8463BD1EAFA6F000EB8BF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8463BC1EAFA6F000EB8BF1 /* ViewController.swift */; };
+		9E8463BD1EAFA6F000EB8BF1 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8463BC1EAFA6F000EB8BF1 /* SplashViewController.swift */; };
 		9E8463C01EAFA6F000EB8BF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E8463BE1EAFA6F000EB8BF1 /* Main.storyboard */; };
 		9E8463C31EAFA6F000EB8BF1 /* ConnectedAlarmApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9E8463C11EAFA6F000EB8BF1 /* ConnectedAlarmApp.xcdatamodeld */; };
 		9E8463C51EAFA6F000EB8BF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E8463C41EAFA6F000EB8BF1 /* Assets.xcassets */; };
@@ -44,9 +51,16 @@
 		494892B055D9C312C2ABE015 /* Pods_ConnectedAlarmAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConnectedAlarmAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58A2C55749A3E1871BDC489B /* Pods_ConnectedAlarmAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConnectedAlarmAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85E9082317FADE129640BC92 /* Pods-ConnectedAlarmAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConnectedAlarmAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConnectedAlarmAppUITests/Pods-ConnectedAlarmAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9787C5951EB6ECCC00D8D482 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		9787C5971EB6EEE700D8D482 /* ChallengeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
+		9787C5991EB6EEF000D8D482 /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		9787C59B1EB6EEF900D8D482 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
+		9787C59D1EB6EFC200D8D482 /* InviteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteViewController.swift; sourceTree = "<group>"; };
+		9787C59F1EB6EFD000D8D482 /* AchievementsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementsViewController.swift; sourceTree = "<group>"; };
+		9787C5A11EB7022200D8D482 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		9E8463B71EAFA6F000EB8BF1 /* ConnectedAlarmApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConnectedAlarmApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E8463BA1EAFA6F000EB8BF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9E8463BC1EAFA6F000EB8BF1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9E8463BC1EAFA6F000EB8BF1 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		9E8463BF1EAFA6F000EB8BF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E8463C21EAFA6F000EB8BF1 /* ConnectedAlarmApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ConnectedAlarmApp.xcdatamodel; sourceTree = "<group>"; };
 		9E8463C41EAFA6F000EB8BF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -175,7 +189,14 @@
 		9EAB7A901EAFB5CA003F9F9A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9E8463BC1EAFA6F000EB8BF1 /* ViewController.swift */,
+				9E8463BC1EAFA6F000EB8BF1 /* SplashViewController.swift */,
+				9787C5951EB6ECCC00D8D482 /* ActivityViewController.swift */,
+				9787C5971EB6EEE700D8D482 /* ChallengeViewController.swift */,
+				9787C5991EB6EEF000D8D482 /* SetupViewController.swift */,
+				9787C59B1EB6EEF900D8D482 /* LeaderboardViewController.swift */,
+				9787C59D1EB6EFC200D8D482 /* InviteViewController.swift */,
+				9787C59F1EB6EFD000D8D482 /* AchievementsViewController.swift */,
+				9787C5A11EB7022200D8D482 /* CustomCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -288,7 +309,6 @@
 				TargetAttributes = {
 					9E8463B61EAFA6F000EB8BF1 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 3BW25KHFKS;
 						ProvisioningStyle = Automatic;
 					};
 					9E8463CD1EAFA6F000EB8BF1 = {
@@ -495,10 +515,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E8463BD1EAFA6F000EB8BF1 /* ViewController.swift in Sources */,
+				9787C59E1EB6EFC200D8D482 /* InviteViewController.swift in Sources */,
+				9E8463BD1EAFA6F000EB8BF1 /* SplashViewController.swift in Sources */,
+				9787C5A21EB7022200D8D482 /* CustomCell.swift in Sources */,
 				9E8463BB1EAFA6F000EB8BF1 /* AppDelegate.swift in Sources */,
+				9787C5961EB6ECCC00D8D482 /* ActivityViewController.swift in Sources */,
+				9787C5A01EB6EFD000D8D482 /* AchievementsViewController.swift in Sources */,
 				9E8463C31EAFA6F000EB8BF1 /* ConnectedAlarmApp.xcdatamodeld in Sources */,
+				9787C5981EB6EEE700D8D482 /* ChallengeViewController.swift in Sources */,
 				9EAB7A8F1EAFAB24003F9F9A /* AppConstants.swift in Sources */,
+				9787C59C1EB6EEF900D8D482 /* LeaderboardViewController.swift in Sources */,
+				9787C59A1EB6EEF000D8D482 /* SetupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,8 +680,9 @@
 			baseConfigurationReference = FB533E80AB4E13143D210C14 /* Pods-ConnectedAlarmApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3BW25KHFKS;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ConnectedAlarmApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alarm.ConnectedAlarmApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -667,8 +695,9 @@
 			baseConfigurationReference = 0B37F842C5DD4323ABF0A937 /* Pods-ConnectedAlarmApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3BW25KHFKS;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ConnectedAlarmApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alarm.ConnectedAlarmApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
