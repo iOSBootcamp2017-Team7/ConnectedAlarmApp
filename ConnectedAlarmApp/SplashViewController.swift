@@ -12,7 +12,9 @@ class SplashViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
+        perform(#selector(SplashViewController.loadMainView), with: nil, afterDelay: 2)
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +22,8 @@ class SplashViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    func loadMainView() {
+        performSegue(withIdentifier: "MainView", sender: self)
+    }
 }
 
