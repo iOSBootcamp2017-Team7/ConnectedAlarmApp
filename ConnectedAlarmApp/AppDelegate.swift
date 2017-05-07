@@ -31,6 +31,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.initialize(with: parseConfiguration)
         // END - Parse Server Setup with APP_ID, MASTER_KEY and SERVER RUL
         
+        
+        // MARK: - Handle user session 
+        //STRAT - Check Parse current user 
+        
+        if PFUser.getCurrentUserInBackground() != nil {
+            
+        }
+        
         return true
     }
 
