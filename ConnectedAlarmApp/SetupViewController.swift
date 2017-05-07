@@ -26,7 +26,7 @@ class SetupViewController: UIViewController {
     }
 
     @IBAction func onSaveClick(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+        //dismiss(animated: true, completion: nil)
     }
     
     /*
