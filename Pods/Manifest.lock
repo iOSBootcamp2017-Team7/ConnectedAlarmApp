@@ -3,16 +3,19 @@ PODS:
   - JTAppleCalendar (7.0.2)
   - Parse (1.14.2):
     - Bolts/Tasks (~> 1.8)
+  - SwiftAddressBook (0.7.0)
 
 DEPENDENCIES:
   - JTAppleCalendar (~> 7.0)
   - Parse
+  - SwiftAddressBook
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   JTAppleCalendar: c14685634064ef67a68209548ff3443208af48a3
   Parse: 4335d65f40cb3d43190d723144bbe1afb9c38230
+  SwiftAddressBook: 997503d04aa62a9b23d9655b5d212f6e2fbb436d
 
-PODFILE CHECKSUM: abe4cdfd8b838a64b086e7e18b19bd8f387adaca
+PODFILE CHECKSUM: d78c04d0e55ce096de152c15f87488d6473ac6b5
 
 COCOAPODS: 1.2.0
