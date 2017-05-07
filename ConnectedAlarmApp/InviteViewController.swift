@@ -15,45 +15,48 @@ class InviteViewController: UIViewController, UITableViewDataSource, UITableView
     
     @IBOutlet weak var inviteTableView: UITableView!
     
+    var alarms: [Alarm]?
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
         inviteTableView.delegate =  self
         inviteTableView.dataSource = self
-        
-        
-        
-    
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "InviteDetailViewControllerSegue" {
+            let cell = sender! as! UITableViewCell
+            let indexPath = inviteTableView.indexPath(for: cell)
+            
+            if alarms != nil {
+                let alarm = self.alarms![(indexPath?.row)!]
+                let inviteViewController = segue.destination as! InviteDetailViewController
+                inviteViewController.alarm = alarm
+            } else {
+                print("No alarm")
+            }
+        }
     }
-    */
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
         let cell = tableView.dequeueReusableCell(withIdentifier: "InviteTableViewCell", for: indexPath) as! InviteTableViewCell
-//        cell.inviteHeaderLabel.text = "You have been invited to join wake up challenge by"
+        
         
         return cell
         
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
+    
+    // Disable grey selection effect
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    
 }

@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import Parse
 
-class AlarmTime: NSObject {
+class AlarmTime: BaseEntity {
     
     var alarmTime: Data!
     var daysOfWeek: Array<Days>?
-    
-    override init() {
-        
+}
+
+extension AlarmTime: PFSubclassing {
+    static func parseClassName() -> String {
+        return "AlarmTime"
     }
 }

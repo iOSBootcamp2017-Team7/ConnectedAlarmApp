@@ -7,9 +7,16 @@
 //
 
 import UIKit
+import Parse
 
-class ParticipantAlarm: NSObject {
+class ParticipantAlarm: BaseEntity {
     var userId: String!
     var alarmId: String!
     var status: Status?
+}
+
+extension ParticipantAlarm: PFSubclassing {
+    static func parseClassName() -> String {
+        return "ParticipantAlarm"
+    }
 }

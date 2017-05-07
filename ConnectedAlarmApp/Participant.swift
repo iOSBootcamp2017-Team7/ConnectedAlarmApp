@@ -9,11 +9,14 @@
 import UIKit
 import Parse
 
-class Participant: NSObject {
+class Participant: BaseEntity {
    
-    var user: PFUser!
+    var user: PFUser?
     var score: String?
-    override init() {
-        
+}
+
+extension Participant: PFSubclassing {
+    static func parseClassName() -> String {
+        return "Participant"
     }
 }

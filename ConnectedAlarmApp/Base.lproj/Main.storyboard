@@ -21,8 +21,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="alarm-clock" translatesAutoresizingMaskIntoConstraints="NO" id="XfA-RI-aiO">
-                                <rect key="frame" x="65" y="196" width="245" height="275"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="alarm-clock" translatesAutoresizingMaskIntoConstraints="NO" id="XfA-RI-aiO">
+                                <rect key="frame" x="65" y="196" width="220" height="221"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                         </subviews>
@@ -34,7 +34,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-274" y="36"/>
+            <point key="canvasLocation" x="-274.39999999999998" y="35.532233883058474"/>
         </scene>
         <!--Setup View Controller-->
         <scene sceneID="lPu-Qq-Xu6">
@@ -253,12 +253,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jr6-qM-pII" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2191.1999999999998" y="-42.728635682158924"/>
+            <point key="canvasLocation" x="2377" y="-44"/>
         </scene>
         <!--Invite View Controller-->
         <scene sceneID="Uzj-mW-VDG">
             <objects>
-                <viewController id="xIA-q7-Uie" customClass="InviteViewController" customModule="ConnectedAlarmApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InviteViewController" id="xIA-q7-Uie" customClass="InviteViewController" customModule="ConnectedAlarmApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Fvv-4M-99p"/>
                         <viewControllerLayoutGuide type="bottom" id="A1S-2x-dns"/>
@@ -295,7 +295,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="b8b-4t-yPK" kind="showDetail" id="nrd-kI-Gep"/>
+                                            <segue destination="b8b-4t-yPK" kind="show" identifier="InviteDetailViewControllerSegue" id="7Ub-cV-jH9"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -317,7 +317,7 @@
             </objects>
             <point key="canvasLocation" x="3148" y="-43.628185907046479"/>
         </scene>
-        <!--Invite Detail View Controller-->
+        <!--Invite-->
         <scene sceneID="4nm-Jd-Ule">
             <objects>
                 <viewController id="b8b-4t-yPK" customClass="InviteDetailViewController" customModule="ConnectedAlarmApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -330,47 +330,107 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="uttamsingh" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="php-FQ-gix">
-                                <rect key="frame" x="8" y="151" width="87" height="21"/>
+                                <rect key="frame" x="17" y="157" width="87" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You have been invited to join wake up challenge by" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0KP-Jx-CcS">
-                                <rect key="frame" x="8" y="82" width="359" height="61"/>
+                                <rect key="frame" x="17" y="88" width="344" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="6:30 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9q-A6-RTW">
-                                <rect key="frame" x="8" y="201" width="66" height="21"/>
+                                <rect key="frame" x="17" y="207" width="66" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Weekdays " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETw-6y-thz">
+                                <rect key="frame" x="135" y="207" width="83" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4n-jj-anR">
-                                <rect key="frame" x="8" y="241" width="359" height="30"/>
+                                <rect key="frame" x="8" y="249" width="359" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.1084372529" green="0.48151732190000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Join"/>
+                                <connections>
+                                    <segue destination="Iea-wJ-sEq" kind="show" id="asj-XX-Doy"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Weekdays " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETw-6y-thz">
-                                <rect key="frame" x="126" y="201" width="83" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Invite" id="EXt-DL-Ra8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zhQ-xf-oNY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4038" y="-44"/>
+            <point key="canvasLocation" x="3981.5999999999999" y="-43.628185907046479"/>
+        </scene>
+        <!--Participants-->
+        <scene sceneID="8ca-Pd-LWg">
+            <objects>
+                <tableViewController id="Iea-wJ-sEq" customClass="JoinInviteTableViewController" customModule="ConnectedAlarmApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="16G-Lg-Yxv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Participants" id="quV-Be-bwp">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="quV-Be-bwp" id="Qrg-ea-yXQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Iea-wJ-sEq" id="HAp-WA-j1I"/>
+                            <outlet property="delegate" destination="Iea-wJ-sEq" id="j0z-uT-MQh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Participants" id="hRW-RY-JfJ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="AKO-eJ-fV1">
+                            <connections>
+                                <action selector="participantsCancelButtonTapped:" destination="Iea-wJ-sEq" id="ota-ed-dJc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="participantsTableView" destination="16G-Lg-Yxv" id="jTj-u0-9eB"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O1u-vA-mKs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4836" y="-43"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LxA-rA-gUv">
+            <objects>
+                <viewController id="Dxu-6F-aaW" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eEE-o9-Wrq"/>
+                        <viewControllerLayoutGuide type="bottom" id="c3q-5G-oQ0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j2W-LJ-ymg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z61-JQ-wCz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-175" y="769"/>
         </scene>
         <!--Achievements-->
         <scene sceneID="fsG-cd-wcc">

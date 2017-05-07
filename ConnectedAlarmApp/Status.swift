@@ -11,4 +11,6 @@ import UIKit
 struct Status {
     static let INVITED = "INVITED"
     static let ACCEPTED = "ACCEPTED"
+    static let ACTIVE = "ACTIVE"
+    static let INACTIVE = "INACTIVE"
 }

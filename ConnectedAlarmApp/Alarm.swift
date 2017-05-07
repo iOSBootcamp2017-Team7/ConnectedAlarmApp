@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class Alarm: NSObject {
+class Alarm: BaseEntity {
 
     var adminUser: PFUser!
     var alarmTime: AlarmTime!
@@ -19,4 +19,9 @@ class Alarm: NSObject {
     var duration: String?
     var participants: Array<Participant>!
     
+}
+extension Alarm: PFSubclassing {
+    static func parseClassName() -> String {
+        return "Alarm"
+    }
 }

@@ -7,14 +7,11 @@
 //
 
 import UIKit
+import Parse
 
-class Days: NSObject {
+class Days: BaseEntity {
 
     var day: String!
-    
-    init(day: WeekDay) {
-        self.day = String(describing: day)
-    }
     
     struct WeekDay {
         static let Monday = "Monday"
@@ -24,5 +21,11 @@ class Days: NSObject {
         static let Friday = "Friday"
         static let Saterday = "Saterday"
         static let Sunday = "Sunday"
+    }
+}
+
+extension Days: PFSubclassing {
+    static func parseClassName() -> String {
+        return "Days"
     }
 }
