@@ -7,13 +7,12 @@
 //
 
 import UIKit
+import Parse
 
 class Participant: NSObject {
-    
-    var user: user!
+   
+    var user: PFUser!
     var score: String?
-    var status: Status?
-    
     override init() {
         
     }

@@ -10,7 +10,7 @@ import UIKit
 
 class AlarmTime: NSObject {
     
-    var alartTime: Data!
+    var alarmTime: Data!
     var daysOfWeek: Array<Days>?
     
     override init() {

@@ -8,12 +8,24 @@
 
 import UIKit
 
-class InviteViewController: UIViewController {
+import Parse
 
+class InviteViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    
+    @IBOutlet weak var inviteTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        inviteTableView.delegate =  self
+        inviteTableView.dataSource = self
+        
+        
+        
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,5 +43,17 @@ class InviteViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+        let cell = tableView.dequeueReusableCell(withIdentifier: "InviteTableViewCell", for: indexPath) as! InviteTableViewCell
+//        cell.inviteHeaderLabel.text = "You have been invited to join wake up challenge by"
+        
+        return cell
+        
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
 }

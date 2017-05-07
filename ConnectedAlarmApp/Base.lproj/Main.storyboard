@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -34,7 +34,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="638" y="37"/>
+            <point key="canvasLocation" x="-274" y="36"/>
         </scene>
         <!--Setup View Controller-->
         <scene sceneID="lPu-Qq-Xu6">
@@ -208,9 +208,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WvM-GC-he2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4204" y="-528"/>
+            <point key="canvasLocation" x="2209" y="-839"/>
         </scene>
-        <!--Leaderboard-->
+        <!--Challenge View Controller-->
         <scene sceneID="UBc-Lk-uFk">
             <objects>
                 <viewController id="rcJ-gw-QUt" customClass="ChallengeViewController" customModule="ConnectedAlarmApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -243,11 +243,134 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Leaderboard" image="leaderboard_32x32" id="5T8-DV-vQv"/>
+                    <navigationItem key="navigationItem" id="AyD-wG-isM">
+                        <barButtonItem key="rightBarButtonItem" title="View Invite" id="JG9-Zz-y9Y">
+                            <connections>
+                                <segue destination="xIA-q7-Uie" kind="show" id="wzz-zP-a8g"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jr6-qM-pII" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3039" y="36"/>
+            <point key="canvasLocation" x="2191.1999999999998" y="-42.728635682158924"/>
+        </scene>
+        <!--Invite View Controller-->
+        <scene sceneID="Uzj-mW-VDG">
+            <objects>
+                <viewController id="xIA-q7-Uie" customClass="InviteViewController" customModule="ConnectedAlarmApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fvv-4M-99p"/>
+                        <viewControllerLayoutGuide type="bottom" id="A1S-2x-dns"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CjO-u8-A27">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h6U-O4-ogz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="InviteTableViewCell" rowHeight="64" id="rz0-Wh-JcX" customClass="InviteTableViewCell" customModule="ConnectedAlarmApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="64"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rz0-Wh-JcX" id="DhA-YM-GDL">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="uttamsingh" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6Y-kH-6wV">
+                                                    <rect key="frame" x="280" y="19" width="87" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="6:30 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6Y-RM-YOE">
+                                                    <rect key="frame" x="8" y="18" width="66" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="b8b-4t-yPK" kind="showDetail" id="nrd-kI-Gep"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="A1S-2x-dns" firstAttribute="top" secondItem="h6U-O4-ogz" secondAttribute="bottom" id="C8a-fB-My0"/>
+                            <constraint firstItem="h6U-O4-ogz" firstAttribute="top" secondItem="Fvv-4M-99p" secondAttribute="bottom" constant="-64" id="U9B-0M-lgZ"/>
+                            <constraint firstAttribute="trailing" secondItem="h6U-O4-ogz" secondAttribute="trailing" id="V0W-VY-6Ge"/>
+                            <constraint firstItem="h6U-O4-ogz" firstAttribute="leading" secondItem="CjO-u8-A27" secondAttribute="leading" id="lfV-3l-3mp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inviteTableView" destination="h6U-O4-ogz" id="JU5-w4-QU8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A1R-5e-OiQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3148" y="-43.628185907046479"/>
+        </scene>
+        <!--Invite Detail View Controller-->
+        <scene sceneID="4nm-Jd-Ule">
+            <objects>
+                <viewController id="b8b-4t-yPK" customClass="InviteDetailViewController" customModule="ConnectedAlarmApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hx6-qb-gzM"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Aa-eb-ttk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GYL-dJ-ifS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="uttamsingh" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="php-FQ-gix">
+                                <rect key="frame" x="8" y="151" width="87" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You have been invited to join wake up challenge by" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0KP-Jx-CcS">
+                                <rect key="frame" x="8" y="82" width="359" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="6:30 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9q-A6-RTW">
+                                <rect key="frame" x="8" y="201" width="66" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4n-jj-anR">
+                                <rect key="frame" x="8" y="241" width="359" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.1084372529" green="0.48151732190000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Join"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Weekdays " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETw-6y-thz">
+                                <rect key="frame" x="126" y="201" width="83" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zhQ-xf-oNY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4038" y="-44"/>
         </scene>
         <!--Achievements-->
         <scene sceneID="fsG-cd-wcc">
@@ -275,7 +398,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9dc-4b-26T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2385" y="631"/>
+            <point key="canvasLocation" x="1252" y="716"/>
         </scene>
         <!--Ib Calendar Data Source-->
         <scene sceneID="WuK-U4-mSa">
@@ -370,7 +493,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j2a-b2-5t6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2385" y="-546"/>
+            <point key="canvasLocation" x="1252" y="-838"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Gfq-JZ-zlH">
@@ -383,13 +506,32 @@
                     </tabBar>
                     <connections>
                         <segue destination="nQE-3d-y03" kind="relationship" relationship="viewControllers" id="fhE-wE-BYS"/>
-                        <segue destination="rcJ-gw-QUt" kind="relationship" relationship="viewControllers" id="tV0-dw-QGg"/>
+                        <segue destination="wqr-B4-X0H" kind="relationship" relationship="viewControllers" id="tV0-dw-QGg"/>
                         <segue destination="L0C-EG-wZh" kind="relationship" relationship="viewControllers" id="xuF-4M-iiG"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QWw-hG-C9X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1436" y="36"/>
+            <point key="canvasLocation" x="511" y="36"/>
+        </scene>
+        <!--Leaderboard-->
+        <scene sceneID="TUU-MN-L4D">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wqr-B4-X0H" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Leaderboard" image="leaderboard_32x32" id="5T8-DV-vQv"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="45Z-1F-hWo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rcJ-gw-QUt" kind="relationship" relationship="rootViewController" id="ahw-Q1-adR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5ST-LE-HKg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1252" y="-42.728635682158924"/>
         </scene>
     </scenes>
     <resources>
@@ -400,6 +542,6 @@
         <image name="medal_32x32" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QOh-ZT-aTU"/>
+        <segue reference="5N3-CM-SaX"/>
     </inferredMetricsTieBreakers>
 </document>

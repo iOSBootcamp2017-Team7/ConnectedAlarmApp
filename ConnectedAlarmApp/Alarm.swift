@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import Parse
 
 class Alarm: NSObject {
 
-    var adminUser: User!
+    var adminUser: PFUser!
     var alarmTime: AlarmTime!
     var status: Status?
+    var startDate: Date!
+    var endDate: Date?
+    var duration: String?
+    var participants: Array<Participant>!
     
 }
