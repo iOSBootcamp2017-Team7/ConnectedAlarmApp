@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B66ECCA1712FDCA53279737DAA0DC98D"
+               BlueprintIdentifier = "BEFD93B323140F236079446C62F1DAB9"
                BuildableName = "Pods_ConnectedAlarmApp.framework"
                BlueprintName = "Pods-ConnectedAlarmApp"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B66ECCA1712FDCA53279737DAA0DC98D"
+            BlueprintIdentifier = "BEFD93B323140F236079446C62F1DAB9"
             BuildableName = "Pods_ConnectedAlarmApp.framework"
             BlueprintName = "Pods-ConnectedAlarmApp"
             ReferencedContainer = "container:Pods.xcodeproj">

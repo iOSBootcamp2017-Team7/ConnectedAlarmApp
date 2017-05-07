@@ -6,6 +6,7 @@ target 'ConnectedAlarmApp' do
   use_frameworks!
   pod 'Parse'
   pod 'JTAppleCalendar', '~> 7.0'
+  pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
   
   # Pods for ConnectedAlarmApp
 
