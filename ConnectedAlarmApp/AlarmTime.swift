@@ -11,7 +11,7 @@ import Parse
 
 class AlarmTime: BaseEntity {
     
-    var alarmTime: Data!
+    var alarmTime: Date!
     var daysOfWeek: Array<Days>?
 }
 

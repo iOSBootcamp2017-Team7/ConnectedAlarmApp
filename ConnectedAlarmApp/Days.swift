@@ -14,13 +14,13 @@ class Days: BaseEntity {
     var day: String!
     
     struct WeekDay {
+        static let Sunday: String = "Sunday"
         static let Monday = "Monday"
         static let Tuesday = "Tuesday"
         static let Wednesday = "Wednesday"
         static let Thursday = "Thursday"
         static let Friday = "Friday"
-        static let Saterday = "Saterday"
-        static let Sunday = "Sunday"
+        static let Saturday = "Saturday"
     }
 }
 

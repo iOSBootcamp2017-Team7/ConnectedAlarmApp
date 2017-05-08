@@ -9,9 +9,14 @@
 import UIKit
 import SwiftAddressBook
 
+protocol InviteFriendsViewControllerDelegate : class {
+    func friendsInviteComplete(controller: InviteFriendsViewController)
+}
 
-class InviteFriendsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,InviteButtonDelegate{
+class InviteFriendsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, InviteButtonDelegate {
 
+    var delegate: InviteFriendsViewControllerDelegate!
+    
     @IBOutlet weak var tableView: UITableView!
     
     var contacts : [Contact] = []
@@ -22,6 +27,8 @@ class InviteFriendsViewController: UIViewController, UITableViewDataSource, UITa
     var addState : [String : Bool] = [:]
     
     var dummyusers  = ["5555648583","8885555512","5555228243"]
+    
+    var alarm: Alarm!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,7 +78,11 @@ class InviteFriendsViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     @IBAction func onSave(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+        //dismiss(animated: true, completion: nil)
+        
+        if delegate != nil {
+            delegate.friendsInviteComplete(controller: self)
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
