@@ -4,11 +4,22 @@ PODS:
   - Parse (1.14.2):
     - Bolts/Tasks (~> 1.8)
   - SwiftAddressBook (0.7.0)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - JTAppleCalendar (~> 7.0)
   - Parse
   - SwiftAddressBook
+  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
+
+EXTERNAL SOURCES:
+  SwiftyJSON:
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+CHECKOUT OPTIONS:
+  SwiftyJSON:
+    :commit: 74c3f1c96aadaa597b42bfd108eb02d0af409434
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
@@ -17,5 +28,7 @@ SPEC CHECKSUMS:
   SwiftAddressBook: 997503d04aa62a9b23d9655b5d212f6e2fbb436d
 
 PODFILE CHECKSUM: d78c04d0e55ce096de152c15f87488d6473ac6b5
+  SwiftyJSON: 05cf0e98a950e2ba343735264f5a96b81e755d00
+
 
 COCOAPODS: 1.2.0
