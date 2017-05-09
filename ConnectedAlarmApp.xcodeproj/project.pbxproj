@@ -37,6 +37,11 @@
 		A7A3A58E1EBFB5730058A33A /* ExtensionMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A3A58A1EBFB5730058A33A /* ExtensionMethods.swift */; };
 		A7A3A58F1EBFB5730058A33A /* InviteFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A3A58B1EBFB5730058A33A /* InviteFriendsViewController.swift */; };
 		A7A3A5911EBFB6030058A33A /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A3A5901EBFB6030058A33A /* Contact.swift */; };
+		A7A3A5951EC010D80058A33A /* BaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A3A5921EC010D80058A33A /* BaseEntity.swift */; };
+		A7A3A5961EC010D80058A33A /* JoinInviteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A3A5931EC010D80058A33A /* JoinInviteTableViewController.swift */; };
+		A7A3A5971EC010D80058A33A /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A3A5941EC010D80058A33A /* Mapper.swift */; };
+		A7A3A59B1EC16D670058A33A /* ConnectedAlarmApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7A3A5981EC16D670058A33A /* ConnectedAlarmApp.xcdatamodeld */; };
+		A7A3A59C1EC16D680058A33A /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A3A59A1EC16D670058A33A /* DBManager.swift */; };
 		BD240BDDAB5AFB11F993C20C /* Pods_ConnectedAlarmAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494892B055D9C312C2ABE015 /* Pods_ConnectedAlarmAppUITests.framework */; };
 		C206BF870BF0C334DB4A4A58 /* Pods_ConnectedAlarmAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58A2C55749A3E1871BDC489B /* Pods_ConnectedAlarmAppTests.framework */; };
 		F1B8C378843D0BAA81660673 /* Pods_ConnectedAlarmApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F28A6F42E5033F26CCBC1A7 /* Pods_ConnectedAlarmApp.framework */; };
@@ -102,6 +107,11 @@
 		A7A3A58A1EBFB5730058A33A /* ExtensionMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionMethods.swift; sourceTree = "<group>"; };
 		A7A3A58B1EBFB5730058A33A /* InviteFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteFriendsViewController.swift; sourceTree = "<group>"; };
 		A7A3A5901EBFB6030058A33A /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		A7A3A5921EC010D80058A33A /* BaseEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseEntity.swift; sourceTree = "<group>"; };
+		A7A3A5931EC010D80058A33A /* JoinInviteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinInviteTableViewController.swift; sourceTree = "<group>"; };
+		A7A3A5941EC010D80058A33A /* Mapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
+		A7A3A5991EC16D670058A33A /* ConnectedAlarmApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ConnectedAlarmApp.xcdatamodel; sourceTree = "<group>"; };
+		A7A3A59A1EC16D670058A33A /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		F6866A08F4F81D1A5F453468 /* Pods-ConnectedAlarmAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConnectedAlarmAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConnectedAlarmAppTests/Pods-ConnectedAlarmAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		FB533E80AB4E13143D210C14 /* Pods-ConnectedAlarmApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConnectedAlarmApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConnectedAlarmApp/Pods-ConnectedAlarmApp.debug.xcconfig"; sourceTree = "<group>"; };
 		FCA3B53CD4EB341200380F7A /* Pods-ConnectedAlarmAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConnectedAlarmAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConnectedAlarmAppTests/Pods-ConnectedAlarmAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -173,6 +183,10 @@
 		9E8463B91EAFA6F000EB8BF1 /* ConnectedAlarmApp */ = {
 			isa = PBXGroup;
 			children = (
+				A7A3A5981EC16D670058A33A /* ConnectedAlarmApp.xcdatamodeld */,
+				A7A3A5921EC010D80058A33A /* BaseEntity.swift */,
+				A7A3A5931EC010D80058A33A /* JoinInviteTableViewController.swift */,
+				A7A3A5941EC010D80058A33A /* Mapper.swift */,
 				9EAB7A8D1EAFAADB003F9F9A /* Constants */,
 				9EAB7A901EAFB5CA003F9F9A /* Controllers */,
 				9EAB7A921EAFB5E9003F9F9A /* Models */,
@@ -259,6 +273,7 @@
 		9EAB7A931EAFB652003F9F9A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A7A3A59A1EC16D670058A33A /* DBManager.swift */,
 				9E44F9F01EBE20BE00841009 /* RestApiManager.swift */,
 			);
 			name = Utils;
@@ -564,20 +579,25 @@
 				A7A3A5911EBFB6030058A33A /* Contact.swift in Sources */,
 				9E44F9F11EBE20BE00841009 /* RestApiManager.swift in Sources */,
 				9E44F9EB1EBD7E5500841009 /* Alarm.swift in Sources */,
+				A7A3A59B1EC16D670058A33A /* ConnectedAlarmApp.xcdatamodeld in Sources */,
 				9787C5A21EB7022200D8D482 /* CustomCell.swift in Sources */,
 				9E8463BB1EAFA6F000EB8BF1 /* AppDelegate.swift in Sources */,
 				9E9305371EBEC540002430D5 /* InviteTableViewCell.swift in Sources */,
 				9E44F9E71EBD7B5B00841009 /* Participant.swift in Sources */,
+				A7A3A5951EC010D80058A33A /* BaseEntity.swift in Sources */,
 				9E44F9ED1EBD7FBD00841009 /* AlarmTime.swift in Sources */,
 				9787C5961EB6ECCC00D8D482 /* ActivityViewController.swift in Sources */,
 				9787C5A01EB6EFD000D8D482 /* AchievementsViewController.swift in Sources */,
 				9E8463C31EAFA6F000EB8BF1 /* ConnectedAlarmApp.xcdatamodeld in Sources */,
+				A7A3A5971EC010D80058A33A /* Mapper.swift in Sources */,
+				A7A3A5961EC010D80058A33A /* JoinInviteTableViewController.swift in Sources */,
 				9787C5981EB6EEE700D8D482 /* ChallengeViewController.swift in Sources */,
 				9E44F9E91EBD7CC800841009 /* Status.swift in Sources */,
 				9EAB7A8F1EAFAB24003F9F9A /* AppConstants.swift in Sources */,
 				A7A3A58C1EBFB5730058A33A /* ContactsTable.swift in Sources */,
 				9787C59C1EB6EEF900D8D482 /* LeaderboardViewController.swift in Sources */,
 				A7A3A58D1EBFB5730058A33A /* ContactsTableCell.swift in Sources */,
+				A7A3A59C1EC16D680058A33A /* DBManager.swift in Sources */,
 				9E9305391EBED059002430D5 /* InviteDetailViewController.swift in Sources */,
 				9E93053E1EBEE35F002430D5 /* ParticipantAlarm.swift in Sources */,
 				9E44F9EF1EBD802800841009 /* Days.swift in Sources */,
@@ -871,6 +891,16 @@
 				9E8463C21EAFA6F000EB8BF1 /* ConnectedAlarmApp.xcdatamodel */,
 			);
 			currentVersion = 9E8463C21EAFA6F000EB8BF1 /* ConnectedAlarmApp.xcdatamodel */;
+			path = ConnectedAlarmApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		A7A3A5981EC16D670058A33A /* ConnectedAlarmApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A7A3A5991EC16D670058A33A /* ConnectedAlarmApp.xcdatamodel */,
+			);
+			currentVersion = A7A3A5991EC16D670058A33A /* ConnectedAlarmApp.xcdatamodel */;
 			path = ConnectedAlarmApp.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
