@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9773DCF91EC0359F00F420DD /* BaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9773DCF81EC0359F00F420DD /* BaseEntity.swift */; };
 		9787C5961EB6ECCC00D8D482 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9787C5951EB6ECCC00D8D482 /* ActivityViewController.swift */; };
 		9787C5981EB6EEE700D8D482 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9787C5971EB6EEE700D8D482 /* ChallengeViewController.swift */; };
 		9787C59A1EB6EEF000D8D482 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9787C5991EB6EEF000D8D482 /* SetupViewController.swift */; };
@@ -70,6 +71,7 @@
 		494892B055D9C312C2ABE015 /* Pods_ConnectedAlarmAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConnectedAlarmAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58A2C55749A3E1871BDC489B /* Pods_ConnectedAlarmAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConnectedAlarmAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85E9082317FADE129640BC92 /* Pods-ConnectedAlarmAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConnectedAlarmAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConnectedAlarmAppUITests/Pods-ConnectedAlarmAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9773DCF81EC0359F00F420DD /* BaseEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseEntity.swift; sourceTree = "<group>"; };
 		9787C5951EB6ECCC00D8D482 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		9787C5971EB6EEE700D8D482 /* ChallengeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
 		9787C5991EB6EEF000D8D482 /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 		9EAB7A921EAFB5E9003F9F9A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9773DCF81EC0359F00F420DD /* BaseEntity.swift */,
 				A7A3A5901EBFB6030058A33A /* Contact.swift */,
 				9E44F9E61EBD7B5B00841009 /* Participant.swift */,
 				9E44F9EA1EBD7E5500841009 /* Alarm.swift */,
