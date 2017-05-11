@@ -24,7 +24,6 @@ class AlarmManager: NSObject {
         let alert = UIAlertController(title: "Alarm", message: nil, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.cancel, handler: { (action) in
             alarmTimer.invalidate()
-            alarmTimer = nil
         }))
         view.present(alert, animated: true, completion: nil)
     }
