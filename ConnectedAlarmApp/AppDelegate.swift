@@ -32,11 +32,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         // MARK: - Handle user session 
-        //STRAT - Check Parse current user 
+        // STRAT - Check Parse current user
         
         if PFUser.getCurrentUserInBackground() != nil {
             
         }
+        
+        
+        // MARK: - Handle UINavigation background Color
+        // STRAT - UINavigation Color
+        
+        UINavigationBar.appearance().barTintColor = UIColor(red: 252/255.0, green: 72/255.0, blue: 49/255.0, alpha: 1)
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().barStyle = .black
+
+        // END - UINavigation Color
         
         return true
     }

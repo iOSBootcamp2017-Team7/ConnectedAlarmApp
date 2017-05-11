@@ -277,7 +277,7 @@
             </objects>
             <point key="canvasLocation" x="3108" y="-672"/>
         </scene>
-        <!--Challenge View Controller-->
+        <!--Leader Board-->
         <scene sceneID="UBc-Lk-uFk">
             <objects>
                 <viewController id="rcJ-gw-QUt" customClass="ChallengeViewController" customModule="ConnectedAlarmApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -310,8 +310,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="AyD-wG-isM">
-                        <barButtonItem key="rightBarButtonItem" title="View Invite" id="JG9-Zz-y9Y">
+                    <navigationItem key="navigationItem" title="Leader Board" id="AyD-wG-isM">
+                        <barButtonItem key="rightBarButtonItem" image="view_invite" id="JG9-Zz-y9Y">
                             <connections>
                                 <segue destination="xIA-q7-Uie" kind="show" identifier="ViewInvites" id="wzz-zP-a8g"/>
                             </connections>
@@ -326,7 +326,7 @@
             </objects>
             <point key="canvasLocation" x="1529" y="20"/>
         </scene>
-        <!--Invite View Controller-->
+        <!--Invites-->
         <scene sceneID="Uzj-mW-VDG">
             <objects>
                 <viewController storyboardIdentifier="InviteViewController" id="xIA-q7-Uie" customClass="InviteViewController" customModule="ConnectedAlarmApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -380,6 +380,7 @@
                             <constraint firstItem="h6U-O4-ogz" firstAttribute="leading" secondItem="CjO-u8-A27" secondAttribute="leading" id="lfV-3l-3mp"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Invites" id="O4Z-Iu-Car"/>
                     <connections>
                         <outlet property="inviteTableView" destination="h6U-O4-ogz" id="JU5-w4-QU8"/>
                     </connections>
@@ -388,7 +389,7 @@
             </objects>
             <point key="canvasLocation" x="2338" y="21"/>
         </scene>
-        <!--Invite-->
+        <!--Invite Detail-->
         <scene sceneID="4nm-Jd-Ule">
             <objects>
                 <viewController id="b8b-4t-yPK" customClass="InviteDetailViewController" customModule="ConnectedAlarmApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -441,7 +442,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Invite" id="EXt-DL-Ra8"/>
+                    <navigationItem key="navigationItem" title="Invite Detail" id="EXt-DL-Ra8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zhQ-xf-oNY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -485,9 +486,10 @@
             </objects>
             <point key="canvasLocation" x="3878" y="18"/>
         </scene>
-        <!--Achievements View Controller-->
+        <!--Trophy-->
         <scene sceneID="fsG-cd-wcc">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9dc-4b-26T" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="L0C-EG-wZh" customClass="AchievementsViewController" customModule="ConnectedAlarmApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cFQ-ou-TBi"/>
@@ -497,21 +499,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TBD" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBs-eh-MiQ">
-                                <rect key="frame" x="45" y="269" width="284" height="129"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coming soon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8wk-5E-Gju">
+                                <rect key="frame" x="137" y="323" width="101" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="aMA-uF-oTK"/>
+                    <navigationItem key="navigationItem" title="Trophy" id="aMA-uF-oTK"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9dc-4b-26T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1529" y="713"/>
+        </scene>
+        <!--More-->
+        <scene sceneID="kkC-mE-35x">
+            <objects>
+                <viewController id="jlE-pl-yat" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yeY-hX-xYj"/>
+                        <viewControllerLayoutGuide type="bottom" id="A1b-fi-XZE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5O9-NF-4bH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="More" id="2sA-Uk-6Br"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KcZ-P0-Ocs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1529" y="1400"/>
         </scene>
         <!--Ib Calendar Data Source-->
         <scene sceneID="WuK-U4-mSa">
@@ -602,7 +622,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="pdy-2O-zm2"/>
+                    <navigationItem key="navigationItem" title="Activity Tracker" id="pdy-2O-zm2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j2a-b2-5t6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -621,17 +641,18 @@
                         <segue destination="LXm-CG-wMV" kind="relationship" relationship="viewControllers" id="fhE-wE-BYS"/>
                         <segue destination="wqr-B4-X0H" kind="relationship" relationship="viewControllers" id="tV0-dw-QGg"/>
                         <segue destination="1tO-vp-Odo" kind="relationship" relationship="viewControllers" id="xuF-4M-iiG"/>
+                        <segue destination="Bg7-cs-cft" kind="relationship" relationship="viewControllers" id="kwd-TZ-G0S"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QWw-hG-C9X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-334" y="22"/>
+            <point key="canvasLocation" x="-780" y="837"/>
         </scene>
-        <!--Leaderboard-->
+        <!--Board-->
         <scene sceneID="TUU-MN-L4D">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wqr-B4-X0H" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Leaderboard" image="leaderboard_32x32" id="5T8-DV-vQv"/>
+                    <tabBarItem key="tabBarItem" title="Board" image="leaderboard_32x32" id="5T8-DV-vQv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="45Z-1F-hWo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -650,7 +671,7 @@
         <scene sceneID="B4R-TJ-fKT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1tO-vp-Odo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Achievements" image="medal_32x32" id="5nb-2v-4Xr"/>
+                    <tabBarItem key="tabBarItem" title="Achievements" image="medal_24x24" id="5nb-2v-4Xr"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kzt-Ni-W5B">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -665,11 +686,13 @@
             </objects>
             <point key="canvasLocation" x="702" y="713"/>
         </scene>
-        <!--Activity Tracker-->
+        <!--Tracker-->
         <scene sceneID="6nu-5I-BJj">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LXm-CG-wMV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Activity Tracker" image="activity_tracker_32x32" id="Em4-of-16I"/>
+                    <tabBarItem key="tabBarItem" title="Tracker" image="tracker" id="Em4-of-16I">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gfe-vh-U8e">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -684,16 +707,36 @@
             </objects>
             <point key="canvasLocation" x="702" y="-672"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zQc-Vk-T8x">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bg7-cs-cft" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="more" id="rbg-8Q-k4x"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="I9g-gI-g92">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jlE-pl-yat" kind="relationship" relationship="rootViewController" id="INp-SB-pf7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1In-zo-XRH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="702" y="1399"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Doughnut-48" width="48" height="48"/>
         <image name="Plus-50" width="50" height="50"/>
-        <image name="activity_tracker_32x32" width="32" height="32"/>
         <image name="add_48x48" width="48" height="48"/>
         <image name="leaderboard_32x32" width="32" height="32"/>
-        <image name="medal_32x32" width="32" height="32"/>
+        <image name="medal_24x24" width="24" height="24"/>
+        <image name="tracker" width="24" height="24"/>
+        <image name="view_invite" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QOh-ZT-aTU"/>
+        <segue reference="5N3-CM-SaX"/>
     </inferredMetricsTieBreakers>
 </document>
