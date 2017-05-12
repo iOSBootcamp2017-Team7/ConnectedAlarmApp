@@ -31,6 +31,7 @@
 		9E9305371EBEC540002430D5 /* InviteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9305361EBEC540002430D5 /* InviteTableViewCell.swift */; };
 		9E9305391EBED059002430D5 /* InviteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9305381EBED059002430D5 /* InviteDetailViewController.swift */; };
 		9E93053E1EBEE35F002430D5 /* ParticipantAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93053D1EBEE35F002430D5 /* ParticipantAlarm.swift */; };
+		9E9E469D1EC5F62D00A054BD /* PedometerUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9E469C1EC5F62D00A054BD /* PedometerUtil.swift */; };
 		9EAB7A8F1EAFAB24003F9F9A /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB7A8E1EAFAB24003F9F9A /* AppConstants.swift */; };
 		A7A3A58C1EBFB5730058A33A /* ContactsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A3A5881EBFB5730058A33A /* ContactsTable.swift */; };
 		A7A3A58D1EBFB5730058A33A /* ContactsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A3A5891EBFB5730058A33A /* ContactsTableCell.swift */; };
@@ -99,6 +100,7 @@
 		9E9305361EBEC540002430D5 /* InviteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteTableViewCell.swift; sourceTree = "<group>"; };
 		9E9305381EBED059002430D5 /* InviteDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteDetailViewController.swift; sourceTree = "<group>"; };
 		9E93053D1EBEE35F002430D5 /* ParticipantAlarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticipantAlarm.swift; sourceTree = "<group>"; };
+		9E9E469C1EC5F62D00A054BD /* PedometerUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedometerUtil.swift; sourceTree = "<group>"; };
 		9EAB7A8E1EAFAB24003F9F9A /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		9F28A6F42E5033F26CCBC1A7 /* Pods_ConnectedAlarmApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConnectedAlarmApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7A3A5881EBFB5730058A33A /* ContactsTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTable.swift; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 		9EAB7A931EAFB652003F9F9A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				9E9E469C1EC5F62D00A054BD /* PedometerUtil.swift */,
 				975E8E631EC409DC00C3B75B /* AlarmManager.swift */,
 				A7A3A5941EC010D80058A33A /* Mapper.swift */,
 				A7A3A59A1EC16D670058A33A /* DBManager.swift */,
@@ -578,6 +581,7 @@
 				9787C5A21EB7022200D8D482 /* CustomCell.swift in Sources */,
 				9E8463BB1EAFA6F000EB8BF1 /* AppDelegate.swift in Sources */,
 				9E9305371EBEC540002430D5 /* InviteTableViewCell.swift in Sources */,
+				9E9E469D1EC5F62D00A054BD /* PedometerUtil.swift in Sources */,
 				9E44F9E71EBD7B5B00841009 /* Participant.swift in Sources */,
 				A7A3A5951EC010D80058A33A /* BaseEntity.swift in Sources */,
 				9E44F9ED1EBD7FBD00841009 /* AlarmTime.swift in Sources */,
