@@ -45,6 +45,7 @@ class ChallengeViewController: UIViewController, SetupViewControllerDelegate {
         if segue.identifier == "SetupAlarm" {
             let destinationViewController = segue.destination as! SetupViewController
             destinationViewController.delegate = self
+            destinationViewController.invokingController = "ChallengeViewController"
         }
         else if segue.identifier == "ViewInvites" {
             

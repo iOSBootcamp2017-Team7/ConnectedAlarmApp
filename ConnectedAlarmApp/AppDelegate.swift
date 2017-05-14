@@ -9,11 +9,13 @@
 import UIKit
 import CoreData
 import Parse
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let notificationDelegate = UYLNotificationDelegate()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -47,6 +49,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().barStyle = .black
 
+        // Register for notifications
+        let center = UNUserNotificationCenter.current()
+        center.delegate = notificationDelegate
+        
+        let options: UNAuthorizationOptions = [.alert, .sound];
+        center.requestAuthorization(options: options) {
+            (granted, error) in
+            if !granted {
+                print("Something went wrong")
+            }
+        }
+        
+        //application.registerUserNotificationSettings(UIUserNotificationSettings(types: .sound, categories: nil))
+        
         // END - UINavigation Color
         
         return true

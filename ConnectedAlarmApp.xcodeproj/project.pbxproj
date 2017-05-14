@@ -15,6 +15,8 @@
 		9787C59E1EB6EFC200D8D482 /* InviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9787C59D1EB6EFC200D8D482 /* InviteViewController.swift */; };
 		9787C5A01EB6EFD000D8D482 /* AchievementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9787C59F1EB6EFD000D8D482 /* AchievementsViewController.swift */; };
 		9787C5A21EB7022200D8D482 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9787C5A11EB7022200D8D482 /* CustomCell.swift */; };
+		979515591EC7CE530012C513 /* UYLNotificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979515581EC7CE530012C513 /* UYLNotificationDelegate.swift */; };
+		9795155C1EC7D12A0012C513 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9795155B1EC7D12A0012C513 /* alarm.mp3 */; };
 		9E44F9E71EBD7B5B00841009 /* Participant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E44F9E61EBD7B5B00841009 /* Participant.swift */; };
 		9E44F9E91EBD7CC800841009 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E44F9E81EBD7CC800841009 /* Status.swift */; };
 		9E44F9EB1EBD7E5500841009 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E44F9EA1EBD7E5500841009 /* Alarm.swift */; };
@@ -78,6 +80,8 @@
 		9787C59D1EB6EFC200D8D482 /* InviteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteViewController.swift; sourceTree = "<group>"; };
 		9787C59F1EB6EFD000D8D482 /* AchievementsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementsViewController.swift; sourceTree = "<group>"; };
 		9787C5A11EB7022200D8D482 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		979515581EC7CE530012C513 /* UYLNotificationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UYLNotificationDelegate.swift; sourceTree = "<group>"; };
+		9795155B1EC7D12A0012C513 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
 		9E44F9E61EBD7B5B00841009 /* Participant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Participant.swift; sourceTree = "<group>"; };
 		9E44F9E81EBD7CC800841009 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		9E44F9EA1EBD7E5500841009 /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
@@ -158,6 +162,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9795155A1EC7D1150012C513 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 		9E8463AE1EAFA6F000EB8BF1 = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +194,8 @@
 		9E8463B91EAFA6F000EB8BF1 /* ConnectedAlarmApp */ = {
 			isa = PBXGroup;
 			children = (
+				9795155B1EC7D12A0012C513 /* alarm.mp3 */,
+				9795155A1EC7D1150012C513 /* Assets */,
 				9EAB7A8D1EAFAADB003F9F9A /* Constants */,
 				9EAB7A901EAFB5CA003F9F9A /* Controllers */,
 				9EAB7A921EAFB5E9003F9F9A /* Models */,
@@ -275,6 +288,7 @@
 				A7A3A5941EC010D80058A33A /* Mapper.swift */,
 				A7A3A59A1EC16D670058A33A /* DBManager.swift */,
 				9E44F9F01EBE20BE00841009 /* RestApiManager.swift */,
+				979515581EC7CE530012C513 /* UYLNotificationDelegate.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -407,6 +421,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9795155C1EC7D12A0012C513 /* alarm.mp3 in Resources */,
 				9E8463C81EAFA6F000EB8BF1 /* LaunchScreen.storyboard in Resources */,
 				9E8463C51EAFA6F000EB8BF1 /* Assets.xcassets in Resources */,
 				9E8463C01EAFA6F000EB8BF1 /* Main.storyboard in Resources */,
@@ -587,6 +602,7 @@
 				9E44F9ED1EBD7FBD00841009 /* AlarmTime.swift in Sources */,
 				9787C5961EB6ECCC00D8D482 /* ActivityViewController.swift in Sources */,
 				9787C5A01EB6EFD000D8D482 /* AchievementsViewController.swift in Sources */,
+				979515591EC7CE530012C513 /* UYLNotificationDelegate.swift in Sources */,
 				975E8E641EC409DC00C3B75B /* AlarmManager.swift in Sources */,
 				9E8463C31EAFA6F000EB8BF1 /* ConnectedAlarmApp.xcdatamodeld in Sources */,
 				A7A3A5971EC010D80058A33A /* Mapper.swift in Sources */,
