@@ -11,8 +11,9 @@ import Parse
 
 class AlarmTime: BaseEntity {
     
-    var alarmTime: Date!
-    var daysOfWeek: Array<Days>?
+    @NSManaged var alarmHourMinuteStr: String!
+    @NSManaged var alarmTime: Date!
+    @NSManaged var daysOfWeek: Array<Days>?
 }
 
 extension AlarmTime: PFSubclassing {

@@ -11,16 +11,16 @@ import Parse
 
 class Days: BaseEntity {
 
-    var day: String!
+    @NSManaged var day: String!
     
     struct WeekDay {
         static let Sunday: String = "Sunday"
-        static let Monday = "Monday"
-        static let Tuesday = "Tuesday"
-        static let Wednesday = "Wednesday"
-        static let Thursday = "Thursday"
-        static let Friday = "Friday"
-        static let Saturday = "Saturday"
+        static let Monday: String = "Monday"
+        static let Tuesday: String = "Tuesday"
+        static let Wednesday: String = "Wednesday"
+        static let Thursday: String = "Thursday"
+        static let Friday: String = "Friday"
+        static let Saturday: String = "Saturday"
     }
 }
 
