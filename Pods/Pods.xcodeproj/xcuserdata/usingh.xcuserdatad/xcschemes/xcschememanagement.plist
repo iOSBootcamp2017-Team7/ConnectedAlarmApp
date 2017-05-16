@@ -34,6 +34,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftAddressBook.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftyBeaver.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,12 +62,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>51CB0AF616C6306147B99C320EB6D3ED</key>
+		<key>6EE458AB7C9239893E5C6E840C0BF9B5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6EE458AB7C9239893E5C6E840C0BF9B5</key>
+		<key>8A4FC23F4A1461A31E29A1982A769C68</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,17 +77,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BEFD93B323140F236079446C62F1DAB9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>BFED2E29E95E065400F8846E0231A970</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DB91FC15733FFD93E4727E2B56B9312E</key>
+		<key>C0B95C386BC5FA2A05557534A481FF78</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C3E2C7A56FEB7353679AF74D98801992</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -88,6 +98,11 @@
 			<true/>
 		</dict>
 		<key>F957EABCA56BD8F5B626798CC7B344D3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FBBAD3E9CA8D9806DB5143964E8748AE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -11,6 +11,10 @@ import CoreData
 import Parse
 import UserNotifications
 
+import SwiftyBeaver
+let log = SwiftyBeaver.self
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -65,10 +69,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().barStyle = .black
 
+        // END - UINavigation Color
+
         // Register for notifications
         let center = UNUserNotificationCenter.current()
         center.delegate = notificationDelegate
-        
+
         let options: UNAuthorizationOptions = [.alert, .sound];
         center.requestAuthorization(options: options) {
             (granted, error) in
@@ -76,11 +82,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("Something went wrong")
             }
         }
-        
+
         //application.registerUserNotificationSettings(UIUserNotificationSettings(types: .sound, categories: nil))
-        
-        // END - UINavigation Color
-        
+
+        LogUtil.Instance.setupLog()
+
         return true
     }
 

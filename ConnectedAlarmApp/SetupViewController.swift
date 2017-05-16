@@ -98,8 +98,9 @@ class SetupViewController: UIViewController, InviteFriendsViewControllerDelegate
         
         let alarm = Alarm()
         alarm.adminUser = PFUser.current()
-        alarm.status = "NEW"
+        alarm.status = AlarmStatusType.NEW.rawValue
         alarm.alarmTime = AlarmTime()
+        alarm.alarmTime.alarmHourMinuteStr = "6:30 PM"
         alarm.alarmTime.daysOfWeek = Array<Days>()
         if switchSunday.isOn == true {
             days.day = Days.WeekDay.Sunday

@@ -89,35 +89,58 @@ class InviteFriendsViewController: UIViewController, UITableViewDataSource, UITa
         
         alarm.participants = inviteList
         
-        // Save Alarm setting
-        dbMngr.saveEntity(entity: alarm, sucess: { (result) in
-            print("ALARM SAVED")
-            print(result)
+        alarm.saveInBackground { (success: Bool, error: Error?) in
             
-            if result == true
-            {
-                var participant: Participant!
-                for invitee in self.inviteList {
-                    
-                    participant = invitee
-                    if participant != nil {
-                        let participantAlarm = ParticipantAlarm()
-                        participantAlarm.alarm = self.alarm
-                        participantAlarm.user = participant.user
-                        participantAlarm.status = "Pending"
-                        
-                        self.dbMngr.saveEntity(entity: participantAlarm, sucess: { (result) in
-                            print("Participant Alarm SAVED")
-                            print(result)
-                        }, failure: { (error) in
-                            print("Participant Alarm SAVE FAILED")
-                        })
-                    }
-                }
+            if error != nil {
+                log.error("\(String(describing: error?.localizedDescription))")
+                return
             }
-        }) { (error) in
-            print("Participant Alarm SAVE FAILED")
+            
+            var participant: Participant!
+            for invitee in self.inviteList {
+                
+                participant = invitee
+
+                if participant != nil {
+                    let participantAlarm = ParticipantAlarm()
+                    participantAlarm.alarm = self.alarm
+                    participantAlarm.user = participant.user
+                    participantAlarm.status = AlarmStatusType.INVITED.rawValue
+                    participantAlarm.saveInBackground()
+                }
+                
+            }
         }
+        
+        // Save Alarm setting
+//        dbMngr.saveEntity(entity: alarm, sucess: { (result) in
+//            print("ALARM SAVED")
+//            print(result)
+//            
+//            if result == true
+//            {
+//                var participant: Participant!
+//                for invitee in self.inviteList {
+//                    
+//                    participant = invitee
+//                    if participant != nil {
+//                        let participantAlarm = ParticipantAlarm()
+//                        participantAlarm.alarm = self.alarm
+//                        participantAlarm.user = participant.user
+//                        participantAlarm.status = AlarmStatusType.INVITED.rawValue
+//                        
+//                        self.dbMngr.saveEntity(entity: participantAlarm, sucess: { (result) in
+//                            print("Participant Alarm SAVED")
+//                            print(result)
+//                        }, failure: { (error) in
+//                            print("Participant Alarm SAVE FAILED")
+//                        })
+//                    }
+//                }
+//            }
+//        }) { (error) in
+//            print("Participant Alarm SAVE FAILED")
+//        }
         
         // create a corresponding local notification
         let content = UNMutableNotificationContent()

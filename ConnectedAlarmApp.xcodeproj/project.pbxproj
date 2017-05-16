@@ -35,13 +35,17 @@
 		9E93053E1EBEE35F002430D5 /* ParticipantAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93053D1EBEE35F002430D5 /* ParticipantAlarm.swift */; };
 		9E9E469D1EC5F62D00A054BD /* PedometerUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9E469C1EC5F62D00A054BD /* PedometerUtil.swift */; };
 		9EAB7A8F1EAFAB24003F9F9A /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB7A8E1EAFAB24003F9F9A /* AppConstants.swift */; };
+		9EE3BD481EC6A12A0058F221 /* AlarmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3BD471EC6A12A0058F221 /* AlarmService.swift */; };
+		9EE3BD4A1EC6A64B0058F221 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3BD491EC6A64B0058F221 /* AlertService.swift */; };
+		9EE3BD4D1EC6D55E0058F221 /* AlarmStatusType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3BD4C1EC6D55E0058F221 /* AlarmStatusType.swift */; };
+		9EE3BD4F1EC6E8310058F221 /* LogUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3BD4E1EC6E8310058F221 /* LogUtil.swift */; };
 		A7A3A58C1EBFB5730058A33A /* ContactsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A3A5881EBFB5730058A33A /* ContactsTable.swift */; };
 		A7A3A58D1EBFB5730058A33A /* ContactsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A3A5891EBFB5730058A33A /* ContactsTableCell.swift */; };
 		A7A3A58E1EBFB5730058A33A /* ExtensionMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A3A58A1EBFB5730058A33A /* ExtensionMethods.swift */; };
 		A7A3A58F1EBFB5730058A33A /* InviteFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A3A58B1EBFB5730058A33A /* InviteFriendsViewController.swift */; };
 		A7A3A5911EBFB6030058A33A /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A3A5901EBFB6030058A33A /* Contact.swift */; };
 		A7A3A5951EC010D80058A33A /* BaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A3A5921EC010D80058A33A /* BaseEntity.swift */; };
-		A7A3A5961EC010D80058A33A /* JoinInviteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A3A5931EC010D80058A33A /* JoinInviteTableViewController.swift */; };
+		A7A3A5961EC010D80058A33A /* ParticipantsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A3A5931EC010D80058A33A /* ParticipantsTableViewController.swift */; };
 		A7A3A5971EC010D80058A33A /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A3A5941EC010D80058A33A /* Mapper.swift */; };
 		A7A3A59C1EC16D680058A33A /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A3A59A1EC16D670058A33A /* DBManager.swift */; };
 		BD240BDDAB5AFB11F993C20C /* Pods_ConnectedAlarmAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494892B055D9C312C2ABE015 /* Pods_ConnectedAlarmAppUITests.framework */; };
@@ -106,6 +110,10 @@
 		9E93053D1EBEE35F002430D5 /* ParticipantAlarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticipantAlarm.swift; sourceTree = "<group>"; };
 		9E9E469C1EC5F62D00A054BD /* PedometerUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedometerUtil.swift; sourceTree = "<group>"; };
 		9EAB7A8E1EAFAB24003F9F9A /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		9EE3BD471EC6A12A0058F221 /* AlarmService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmService.swift; sourceTree = "<group>"; };
+		9EE3BD491EC6A64B0058F221 /* AlertService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		9EE3BD4C1EC6D55E0058F221 /* AlarmStatusType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmStatusType.swift; sourceTree = "<group>"; };
+		9EE3BD4E1EC6E8310058F221 /* LogUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogUtil.swift; sourceTree = "<group>"; };
 		9F28A6F42E5033F26CCBC1A7 /* Pods_ConnectedAlarmApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConnectedAlarmApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7A3A5881EBFB5730058A33A /* ContactsTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTable.swift; sourceTree = "<group>"; };
 		A7A3A5891EBFB5730058A33A /* ContactsTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableCell.swift; sourceTree = "<group>"; };
@@ -113,7 +121,7 @@
 		A7A3A58B1EBFB5730058A33A /* InviteFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteFriendsViewController.swift; sourceTree = "<group>"; };
 		A7A3A5901EBFB6030058A33A /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		A7A3A5921EC010D80058A33A /* BaseEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseEntity.swift; sourceTree = "<group>"; };
-		A7A3A5931EC010D80058A33A /* JoinInviteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinInviteTableViewController.swift; sourceTree = "<group>"; };
+		A7A3A5931EC010D80058A33A /* ParticipantsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticipantsTableViewController.swift; sourceTree = "<group>"; };
 		A7A3A5941EC010D80058A33A /* Mapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
 		A7A3A59A1EC16D670058A33A /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		F6866A08F4F81D1A5F453468 /* Pods-ConnectedAlarmAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConnectedAlarmAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConnectedAlarmAppTests/Pods-ConnectedAlarmAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -194,6 +202,8 @@
 		9E8463B91EAFA6F000EB8BF1 /* ConnectedAlarmApp */ = {
 			isa = PBXGroup;
 			children = (
+				9EE3BD4B1EC6D54D0058F221 /* Types */,
+				9EE3BD461EC6A1170058F221 /* Service */,
 				9795155B1EC7D12A0012C513 /* alarm.mp3 */,
 				9795155A1EC7D1150012C513 /* Assets */,
 				9EAB7A8D1EAFAADB003F9F9A /* Constants */,
@@ -245,7 +255,7 @@
 				A7A3A5891EBFB5730058A33A /* ContactsTableCell.swift */,
 				A7A3A58A1EBFB5730058A33A /* ExtensionMethods.swift */,
 				A7A3A58B1EBFB5730058A33A /* InviteFriendsViewController.swift */,
-				A7A3A5931EC010D80058A33A /* JoinInviteTableViewController.swift */,
+				A7A3A5931EC010D80058A33A /* ParticipantsTableViewController.swift */,
 				9787C5951EB6ECCC00D8D482 /* ActivityViewController.swift */,
 				9787C5971EB6EEE700D8D482 /* ChallengeViewController.swift */,
 				9787C5991EB6EEF000D8D482 /* SetupViewController.swift */,
@@ -286,11 +296,29 @@
 				9E9E469C1EC5F62D00A054BD /* PedometerUtil.swift */,
 				975E8E631EC409DC00C3B75B /* AlarmManager.swift */,
 				A7A3A5941EC010D80058A33A /* Mapper.swift */,
+				9EE3BD4E1EC6E8310058F221 /* LogUtil.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		9EE3BD461EC6A1170058F221 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				9EE3BD471EC6A12A0058F221 /* AlarmService.swift */,
 				A7A3A59A1EC16D670058A33A /* DBManager.swift */,
 				9E44F9F01EBE20BE00841009 /* RestApiManager.swift */,
 				979515581EC7CE530012C513 /* UYLNotificationDelegate.swift */,
+				9EE3BD491EC6A64B0058F221 /* AlertService.swift */,
 			);
-			name = Utils;
+			name = Service;
+			sourceTree = "<group>";
+		};
+		9EE3BD4B1EC6D54D0058F221 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				9EE3BD4C1EC6D55E0058F221 /* AlarmStatusType.swift */,
+			);
+			name = Types;
 			sourceTree = "<group>";
 		};
 		B47A2EBC692F772CC0E48A3B /* Frameworks */ = {
@@ -380,6 +408,7 @@
 				TargetAttributes = {
 					9E8463B61EAFA6F000EB8BF1 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 3BW25KHFKS;
 						ProvisioningStyle = Automatic;
 					};
 					9E8463CD1EAFA6F000EB8BF1 = {
@@ -588,12 +617,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9787C59E1EB6EFC200D8D482 /* InviteViewController.swift in Sources */,
+				9EE3BD481EC6A12A0058F221 /* AlarmService.swift in Sources */,
 				A7A3A58F1EBFB5730058A33A /* InviteFriendsViewController.swift in Sources */,
 				A7A3A58E1EBFB5730058A33A /* ExtensionMethods.swift in Sources */,
 				A7A3A5911EBFB6030058A33A /* Contact.swift in Sources */,
 				9E44F9F11EBE20BE00841009 /* RestApiManager.swift in Sources */,
 				9E44F9EB1EBD7E5500841009 /* Alarm.swift in Sources */,
 				9787C5A21EB7022200D8D482 /* CustomCell.swift in Sources */,
+				9EE3BD4D1EC6D55E0058F221 /* AlarmStatusType.swift in Sources */,
 				9E8463BB1EAFA6F000EB8BF1 /* AppDelegate.swift in Sources */,
 				9E9305371EBEC540002430D5 /* InviteTableViewCell.swift in Sources */,
 				9E9E469D1EC5F62D00A054BD /* PedometerUtil.swift in Sources */,
@@ -606,9 +637,11 @@
 				975E8E641EC409DC00C3B75B /* AlarmManager.swift in Sources */,
 				9E8463C31EAFA6F000EB8BF1 /* ConnectedAlarmApp.xcdatamodeld in Sources */,
 				A7A3A5971EC010D80058A33A /* Mapper.swift in Sources */,
-				A7A3A5961EC010D80058A33A /* JoinInviteTableViewController.swift in Sources */,
+				A7A3A5961EC010D80058A33A /* ParticipantsTableViewController.swift in Sources */,
 				9787C5981EB6EEE700D8D482 /* ChallengeViewController.swift in Sources */,
+				9EE3BD4F1EC6E8310058F221 /* LogUtil.swift in Sources */,
 				9E44F9E91EBD7CC800841009 /* Status.swift in Sources */,
+				9EE3BD4A1EC6A64B0058F221 /* AlertService.swift in Sources */,
 				9EAB7A8F1EAFAB24003F9F9A /* AppConstants.swift in Sources */,
 				A7A3A58C1EBFB5730058A33A /* ContactsTable.swift in Sources */,
 				9787C59C1EB6EEF900D8D482 /* LeaderboardViewController.swift in Sources */,
@@ -772,7 +805,7 @@
 			baseConfigurationReference = FB533E80AB4E13143D210C14 /* Pods-ConnectedAlarmApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3BW25KHFKS;
 				INFOPLIST_FILE = ConnectedAlarmApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -787,7 +820,7 @@
 			baseConfigurationReference = 0B37F842C5DD4323ABF0A937 /* Pods-ConnectedAlarmApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3BW25KHFKS;
 				INFOPLIST_FILE = ConnectedAlarmApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
