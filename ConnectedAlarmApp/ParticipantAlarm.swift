@@ -10,9 +10,9 @@ import UIKit
 import Parse
 
 class ParticipantAlarm: BaseEntity {
-    var userId: String!
-    var alarmId: String!
-    var status: Status?
+    @NSManaged var user: PFUser!
+    @NSManaged var alarms: Alarm!
+    @NSManaged var status: String?
 }
 
 extension ParticipantAlarm: PFSubclassing {
