@@ -11,7 +11,7 @@ import Parse
 
 class ParticipantAlarm: BaseEntity {
     @NSManaged var user: PFUser!
-    @NSManaged var alarms: Alarm!
+    @NSManaged var alarm: Alarm!
     @NSManaged var status: String?
 }
 

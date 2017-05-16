@@ -34,11 +34,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         // MARK: - Handle user session 
-        // STRAT - Check Parse current user
+        // START - Check Parse current user
         
-        if PFUser.getCurrentUserInBackground() != nil {
-            
-        }
+        PFUser.logInWithUsername(inBackground: "7259516892", password: "7259516892", block: { (user: PFUser?, error: Error?) in
+            let currentUser = PFUser.current()
+            if currentUser != nil {
+                print("user logged in")
+                print(currentUser?.username!)
+            } else {
+                let user = PFUser()
+                user.username = "7259516892"
+                user.password = "7259516892"
+                user.signUpInBackground(block: { (success: Bool, error: Error?) in
+                    if let error = error {
+                        print(error.localizedDescription)
+                    } else {
+                        print("User Registered successfully")
+                        // manually segue to logged in view
+                    }
+                })
+            }
+        })
         
         
         // MARK: - Handle UINavigation background Color

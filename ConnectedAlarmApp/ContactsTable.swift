@@ -10,6 +10,6 @@ import UIKit
 
 class ContactsTable {
     class func contactsSections() -> [String] {
-        return ["CHALLENGERS IN MY CONTACTS","ADD BY PHONE NUMBER"]
+        return ["Contacts with this app","Invite by SMS"]
     }
 }
