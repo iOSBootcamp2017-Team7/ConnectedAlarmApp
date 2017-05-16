@@ -10,7 +10,6 @@ import UIKit
 import Parse
 
 class Participant: BaseEntity {
-    
     @NSManaged var user: PFUser?
     @NSManaged var score: String?
     @NSManaged var status: String!

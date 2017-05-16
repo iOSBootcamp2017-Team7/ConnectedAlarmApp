@@ -20,6 +20,7 @@ class SetupViewController: UIViewController, InviteFriendsViewControllerDelegate
     
     var delegate: SetupViewControllerDelegate!
     
+    
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var timePicker: UIDatePicker!
     @IBOutlet weak var switchSunday: UISwitch!
@@ -29,17 +30,17 @@ class SetupViewController: UIViewController, InviteFriendsViewControllerDelegate
     @IBOutlet weak var switchThursday: UISwitch!
     @IBOutlet weak var switchFriday: UISwitch!
     @IBOutlet weak var switchSaturday: UISwitch!
-    @IBOutlet weak var startDate: UITextField!
+    @IBOutlet weak var startDatePicker: UIDatePicker!
     @IBOutlet weak var duration: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let date = Date()
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MMM dd, yyyy"
-        startDate.text = formatter.string(from: date)
+        //let date = Date()
+        //let formatter = DateFormatter()
+        //formatter.dateFormat = "MMM dd, yyyy"
+        //startDate.text = formatter.string(from: date)
         
         // Update Save button text
         if invokingController == "ActivityViewController" {
@@ -67,7 +68,7 @@ class SetupViewController: UIViewController, InviteFriendsViewControllerDelegate
     }
     
     func friendsInviteComplete(controller: InviteFriendsViewController) {
-        dismiss(animated: true) { 
+        dismiss(animated: true) {
             if self.delegate != nil {
                 self.delegate.alarmSetupComplete(controller: self)
             }
@@ -97,6 +98,7 @@ class SetupViewController: UIViewController, InviteFriendsViewControllerDelegate
         
         let alarm = Alarm()
         alarm.adminUser = PFUser.current()
+        alarm.status = "NEW"
         alarm.alarmTime = AlarmTime()
         alarm.alarmTime.daysOfWeek = Array<Days>()
         if switchSunday.isOn == true {
@@ -129,32 +131,32 @@ class SetupViewController: UIViewController, InviteFriendsViewControllerDelegate
         }
         alarm.alarmTime.alarmTime = timePicker.date
         formatter.dateFormat = "MMM dd, yyyy"
-        alarm.startDate = formatter.date(from: startDate.text!)
-        alarm.endDate = alarm.startDate
+        alarm.startDate = startDatePicker.date
+        alarm.endDate = alarm.startDate.addingTimeInterval(604800)
         alarm.duration = duration.text
         
         destinationViewController.alarm = alarm
         
-        // create a corresponding local notification
-        let content = UNMutableNotificationContent()
-        content.title = "Hello..."
-        content.body = "Time to wake up"
-        content.sound = UNNotificationSound.init(named: "alarm.mp3") //UNNotificationSound.default()
-        //content.categoryIdentifier = "UYLReminderCategory"
-        
-        //let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-        let triggerDaily = Calendar.current.dateComponents([.hour,.minute,.second], from: timePicker.date)
-        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDaily, repeats: true)
-        
-        let reqIdentifier = "UYLLocalNotification"
-        let center = UNUserNotificationCenter.current()
-        let request = UNNotificationRequest(identifier: reqIdentifier, content: content, trigger: trigger)
-        
-        center.add(request, withCompletionHandler: { (error) in
-            if let error = error {
-                print(error)
-            }
-        })
+//        // create a corresponding local notification
+//        let content = UNMutableNotificationContent()
+//        content.title = "Hello..."
+//        content.body = "Time to wake up"
+//        content.sound = UNNotificationSound.init(named: "alarm.mp3") //UNNotificationSound.default()
+//        //content.categoryIdentifier = "UYLReminderCategory"
+//        
+//        //let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+//        let triggerDaily = Calendar.current.dateComponents([.hour,.minute,.second], from: timePicker.date)
+//        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDaily, repeats: true)
+//        
+//        let reqIdentifier = "UYLLocalNotification"
+//        let center = UNUserNotificationCenter.current()
+//        let request = UNNotificationRequest(identifier: reqIdentifier, content: content, trigger: trigger)
+//        
+//        center.add(request, withCompletionHandler: { (error) in
+//            if let error = error {
+//                print(error)
+//            }
+//        })
         
 //        let snoozeIdentifier = "Snooze"
 //        let snoozeAction = UNNotificationAction(identifier: snoozeIdentifier,
