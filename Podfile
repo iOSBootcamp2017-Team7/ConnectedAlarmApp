@@ -8,6 +8,9 @@ target 'ConnectedAlarmApp' do
   pod 'JTAppleCalendar', '~> 7.0'
   pod 'SwiftAddressBook'
   pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+  
+  pod 'SwiftyBeaver'
+  
   # Pods for ConnectedAlarmApp
 
   target 'ConnectedAlarmAppTests' do
