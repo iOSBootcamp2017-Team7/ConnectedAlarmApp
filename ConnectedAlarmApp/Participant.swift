@@ -10,9 +10,9 @@ import UIKit
 import Parse
 
 class Participant: BaseEntity {
-   
-    var user: PFUser?
-    var score: String?
+    @NSManaged var user: PFUser?
+    @NSManaged var score: String?
+    @NSManaged var status: String!
 }
 
 extension Participant: PFSubclassing {

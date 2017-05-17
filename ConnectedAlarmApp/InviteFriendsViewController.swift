@@ -8,6 +8,8 @@
 
 import UIKit
 import SwiftAddressBook
+import UserNotifications
+
 import Parse
 
 protocol InviteFriendsViewControllerDelegate : class {
@@ -27,15 +29,20 @@ class InviteFriendsViewController: UIViewController, UITableViewDataSource, UITa
     var nonAppUsersState : [String : Bool] = [:]    //Phonenumber collection of nonappusers who are invited to join Download app
     var addState : [String : Bool] = [:]
     
-    var dummyusers  = ["5555648583","8885555512","5555228243"]
+    //var dummyusers  = ["5555648583","8885555512","5555228243"]
+    
+    var dummyusers = [String]()
     
     var alarm: Alarm!
+    var inviteList = [Participant]()
+    let dbMngr = DBManager()
     
     var users : [PFObject] = []
     var usersPhoneNumbers : [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -112,6 +119,82 @@ class InviteFriendsViewController: UIViewController, UITableViewDataSource, UITa
             }
         }
         
+        alarm.participants = inviteList
+        
+        alarm.saveInBackground { (success: Bool, error: Error?) in
+            
+            if error != nil {
+                log.error("\(String(describing: error?.localizedDescription))")
+                return
+            }
+            
+            var participant: Participant!
+            for invitee in self.inviteList {
+                
+                participant = invitee
+
+                if participant != nil {
+                    let participantAlarm = ParticipantAlarm()
+                    participantAlarm.alarm = self.alarm
+                    participantAlarm.user = participant.user
+                    participantAlarm.status = AlarmStatusType.INVITED.rawValue
+                    participantAlarm.saveInBackground()
+                }
+                
+            }
+        }
+        
+        // Save Alarm setting
+//        dbMngr.saveEntity(entity: alarm, sucess: { (result) in
+//            print("ALARM SAVED")
+//            print(result)
+//            
+//            if result == true
+//            {
+//                var participant: Participant!
+//                for invitee in self.inviteList {
+//                    
+//                    participant = invitee
+//                    if participant != nil {
+//                        let participantAlarm = ParticipantAlarm()
+//                        participantAlarm.alarm = self.alarm
+//                        participantAlarm.user = participant.user
+//                        participantAlarm.status = AlarmStatusType.INVITED.rawValue
+//                        
+//                        self.dbMngr.saveEntity(entity: participantAlarm, sucess: { (result) in
+//                            print("Participant Alarm SAVED")
+//                            print(result)
+//                        }, failure: { (error) in
+//                            print("Participant Alarm SAVE FAILED")
+//                        })
+//                    }
+//                }
+//            }
+//        }) { (error) in
+//            print("Participant Alarm SAVE FAILED")
+//        }
+        
+        // create a corresponding local notification
+        let content = UNMutableNotificationContent()
+        content.title = "Hello..."
+        content.body = "Time to wake up"
+        content.sound = UNNotificationSound.init(named: "alarm.mp3") //UNNotificationSound.default()
+        //content.categoryIdentifier = "UYLReminderCategory"
+        
+        //let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+        let triggerDaily = Calendar.current.dateComponents([.hour,.minute,.second], from: alarm.alarmTime.alarmTime)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDaily, repeats: true)
+        
+        let reqIdentifier = "UYLLocalNotification"
+        let center = UNUserNotificationCenter.current()
+        let request = UNNotificationRequest(identifier: reqIdentifier, content: content, trigger: trigger)
+        
+        center.add(request, withCompletionHandler: { (error) in
+            if let error = error {
+                print(error)
+            }
+        })
+        
         if delegate != nil {
             delegate.friendsInviteComplete(controller: self)
         }
@@ -152,6 +235,7 @@ class InviteFriendsViewController: UIViewController, UITableViewDataSource, UITa
         //let contact = contacts[indexPath.row]
         cell.name.text = contact.Name
         cell.phoneNumber = contact.PhoneNumber
+        cell.username.text = contact.PhoneNumber
         
         if cell.delegate == nil {
             cell.delegate = self
@@ -179,6 +263,27 @@ class InviteFriendsViewController: UIViewController, UITableViewDataSource, UITa
                 contactCell.addButton.setImage(#imageLiteral(resourceName: "Plus-50"), for: .normal)
                 nonAppUsersState[contactCell.phoneNumber] = false
             }
+        }
+        
+        let cell = contactCell
+        if cell.checked == true {
+            //let invitee = PFUser()
+            //invitee.username = cell.phoneNumber
+            //invitee.password = cell.phoneNumber
+            
+            let query = PFUser.query()
+            query?.whereKey("username", equalTo: cell.phoneNumber)
+            query?.getFirstObjectInBackground(block: { (user: PFObject?, error: Error?) in
+                
+                if user != nil {
+                    let partipantUser = Participant()
+                    partipantUser.score = "0"
+                    partipantUser.status = "Pending"
+                    partipantUser.user = user as! PFUser
+                    
+                    self.inviteList.append(partipantUser)
+                }
+            })
         }
     }
     /*

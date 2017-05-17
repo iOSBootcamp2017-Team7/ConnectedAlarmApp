@@ -10,15 +10,13 @@ import UIKit
 import Parse
 
 class Alarm: BaseEntity {
-
-    var adminUser: PFUser!
-    var alarmTime: AlarmTime!
-    var status: Status?
-    var startDate: Date!
-    var endDate: Date?
-    var duration: String?
-    var participants: Array<Participant>!
-    
+    @NSManaged var adminUser: PFUser!
+    @NSManaged var alarmTime: AlarmTime!
+    @NSManaged var status: String?
+    @NSManaged var startDate: Date!
+    @NSManaged var endDate: Date?
+    @NSManaged var duration: String?
+    @NSManaged var participants: [Participant]!
 }
 extension Alarm: PFSubclassing {
     static func parseClassName() -> String {

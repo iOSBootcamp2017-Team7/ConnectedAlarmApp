@@ -11,6 +11,10 @@ import CoreData
 import Parse
 import UserNotifications
 
+import SwiftyBeaver
+let log = SwiftyBeaver.self
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -34,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         // MARK: - Handle user session 
-        // STRAT - Check Parse current user
+        // START - Check Parse current user
         
         if PFUser.current() != nil {
             self.window = UIWindow(frame: UIScreen.main.bounds)
@@ -43,7 +47,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.rootViewController = HomeVC
             self.window?.makeKeyAndVisible()
         }
-        
+      /*****
+        PFUser.logInWithUsername(inBackground: "7259516892", password: "7259516892", block: { (user: PFUser?, error: Error?) in
+            let currentUser = PFUser.current()
+            if currentUser != nil {
+                print("user logged in")
+                print(currentUser?.username!)
+            } else {
+                let user = PFUser()
+                user.username = "7259516892"
+                user.password = "7259516892"
+                user.signUpInBackground(block: { (success: Bool, error: Error?) in
+                    if let error = error {
+                        print(error.localizedDescription)
+                    } else {
+                        print("User Registered successfully")
+                        // manually segue to logged in view
+                    }
+                })
+            }
+        })
+      ****/
         
         // MARK: - Handle UINavigation background Color
         // STRAT - UINavigation Color
@@ -53,10 +77,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().barStyle = .black
 
+        // END - UINavigation Color
+
         // Register for notifications
         let center = UNUserNotificationCenter.current()
         center.delegate = notificationDelegate
-        
+
         let options: UNAuthorizationOptions = [.alert, .sound];
         center.requestAuthorization(options: options) {
             (granted, error) in
@@ -64,11 +90,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("Something went wrong")
             }
         }
-        
+
         //application.registerUserNotificationSettings(UIUserNotificationSettings(types: .sound, categories: nil))
-        
-        // END - UINavigation Color
-        
+
+        LogUtil.Instance.setupLog()
+
         return true
     }
 
