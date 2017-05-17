@@ -37,8 +37,10 @@ struct AlarmService {
             if participantAlarms.isEmpty == false {
                 
                 for participantAlarm in participantAlarms {
-                    alarmData.append(participantAlarm.alarm)
-                }                   
+                    if participantAlarm.alarm.adminUser.username != PFUser.current()?.username{
+                        alarmData.append(participantAlarm.alarm)
+                    }
+                }
             }
             
             sucess(alarmData)
