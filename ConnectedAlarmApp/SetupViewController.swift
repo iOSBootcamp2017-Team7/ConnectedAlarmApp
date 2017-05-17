@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import UserNotifications
 
 protocol SetupViewControllerDelegate : class {
     func alarmSetupComplete(controller: SetupViewController)
@@ -15,8 +16,11 @@ protocol SetupViewControllerDelegate : class {
 
 class SetupViewController: UIViewController, InviteFriendsViewControllerDelegate {
 
+    var invokingController: String!
+    
     var delegate: SetupViewControllerDelegate!
     
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var timePicker: UIDatePicker!
     @IBOutlet weak var switchSunday: UISwitch!
     @IBOutlet weak var switchMonday: UISwitch!
@@ -36,6 +40,14 @@ class SetupViewController: UIViewController, InviteFriendsViewControllerDelegate
         let formatter = DateFormatter()
         formatter.dateFormat = "MMM dd, yyyy"
         startDate.text = formatter.string(from: date)
+        
+        // Update Save button text
+        if invokingController == "ActivityViewController" {
+            saveButton.title = "Save"
+        } else if invokingController == "ChallengeViewController" {
+            saveButton.title = "Next"
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,6 +61,9 @@ class SetupViewController: UIViewController, InviteFriendsViewControllerDelegate
 
     @IBAction func onSaveClick(_ sender: UIBarButtonItem) {
         //dismiss(animated: true, completion: nil)
+        if invokingController == "ActivityViewController" {
+            dismiss(animated: true, completion: nil)
+        }
     }
     
     func friendsInviteComplete(controller: InviteFriendsViewController) {
@@ -58,6 +73,14 @@ class SetupViewController: UIViewController, InviteFriendsViewControllerDelegate
             }
         }
     }
+    
+//    // Should Perform Segue
+//    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+//        if invokingController == "ActivityViewController" {
+//            return false
+//        }
+//        return true
+//    }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -111,7 +134,41 @@ class SetupViewController: UIViewController, InviteFriendsViewControllerDelegate
         alarm.duration = duration.text
         
         destinationViewController.alarm = alarm
+        
+        // create a corresponding local notification
+        let content = UNMutableNotificationContent()
+        content.title = "Hello..."
+        content.body = "Time to wake up"
+        content.sound = UNNotificationSound.init(named: "alarm.mp3") //UNNotificationSound.default()
+        //content.categoryIdentifier = "UYLReminderCategory"
+        
+        //let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+        let triggerDaily = Calendar.current.dateComponents([.hour,.minute,.second], from: timePicker.date)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDaily, repeats: true)
+        
+        let reqIdentifier = "UYLLocalNotification"
+        let center = UNUserNotificationCenter.current()
+        let request = UNNotificationRequest(identifier: reqIdentifier, content: content, trigger: trigger)
+        
+        center.add(request, withCompletionHandler: { (error) in
+            if let error = error {
+                print(error)
+            }
+        })
+        
+//        let snoozeIdentifier = "Snooze"
+//        let snoozeAction = UNNotificationAction(identifier: snoozeIdentifier,
+//                                                title: "Snooze", options: [])
+//        
+//        let deleteIdentifier = "UYLDeleteAction"
+//        let deleteAction = UNNotificationAction(identifier: deleteIdentifier,
+//                                                title: "Delete", options: [.destructive])
+//        
+//        let ctgIdentifier = "UYLReminderCategory"
+//        let category = UNNotificationCategory(identifier: ctgIdentifier,
+//                                              actions: [snoozeAction,deleteAction],
+//                                              intentIdentifiers: [], options: [])
+//        center.setNotificationCategories([category])
+        
     }
- 
-
 }
