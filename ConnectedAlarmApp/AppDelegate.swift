@@ -40,6 +40,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // MARK: - Handle user session 
         // START - Check Parse current user
         
+        if PFUser.current() != nil {
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let HomeVC = mainStoryboard.instantiateViewController(withIdentifier: "MainTabBarViewController") as! UITabBarController
+            self.window?.rootViewController = HomeVC
+            self.window?.makeKeyAndVisible()
+        }
+      /*****
         PFUser.logInWithUsername(inBackground: "7259516892", password: "7259516892", block: { (user: PFUser?, error: Error?) in
             let currentUser = PFUser.current()
             if currentUser != nil {
@@ -59,7 +67,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 })
             }
         })
-        
+      ****/
         
         // MARK: - Handle UINavigation background Color
         // STRAT - UINavigation Color

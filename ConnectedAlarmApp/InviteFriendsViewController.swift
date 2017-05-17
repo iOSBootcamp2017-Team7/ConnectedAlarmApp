@@ -9,6 +9,7 @@
 import UIKit
 import SwiftAddressBook
 import UserNotifications
+
 import Parse
 
 protocol InviteFriendsViewControllerDelegate : class {
@@ -36,11 +37,27 @@ class InviteFriendsViewController: UIViewController, UITableViewDataSource, UITa
     var inviteList = [Participant]()
     let dbMngr = DBManager()
     
+    var users : [PFObject] = []
+    var usersPhoneNumbers : [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        DBManager.sharedInstance.fetchAllUsers(sucess: { (_users : [PFObject]) in
+            self.users = _users
+            
+            for user in _users{
+                self.usersPhoneNumbers.append(user["username"] as! String)
+            }
+            self.setContactSection()
+            self.tableView.reloadData()
+            
+        }) { (error :Error) in
+            print(error.localizedDescription)
+        }
         
         SwiftAddressBook.requestAccessWithCompletion { (success, error) -> Void in
             if success{
@@ -54,25 +71,32 @@ class InviteFriendsViewController: UIViewController, UITableViewDataSource, UITa
                         contact.Name = "\(person.firstName ?? "") \(person.lastName ?? "")"
                         contact.PhoneNumber = phonenumber
                         
-                        if self.dummyusers.contains(phonenumber){
-                            self.appUsers.append(contact)
-                        }else {
-                            self.nonappUsers.append(contact)
-                        }
                         self.addState[phonenumber] = false
                         self.contacts.append(contact)
                     }
-                    print("\(self.dummyusers.map({$0.digits}))")
+                    self.setContactSection()
+                    print("\(self.usersPhoneNumbers.map({$0.digits}))")
                     self.tableView.reloadData()
                     
                 }
             }else {
-                print("\(self.dummyusers.map({$0.digits}))")
+                print("\(self.usersPhoneNumbers.map({$0.digits}))")
                 //no success. Optionally evaluate error
             }
         }
         
         // Do any additional setup after loading the view.
+    }
+    
+    func setContactSection(){
+        for contact in self.contacts{
+            if self.usersPhoneNumbers.contains(contact.PhoneNumber!){
+                self.appUsers.append(contact)
+            }else {
+                self.nonappUsers.append(contact)
+            }
+
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -86,6 +110,14 @@ class InviteFriendsViewController: UIViewController, UITableViewDataSource, UITa
     
     @IBAction func onSave(_ sender: UIBarButtonItem) {
         //dismiss(animated: true, completion: nil)
+        for contact in self.appUsers{
+            if self.appUsersState.keys.contains(contact.PhoneNumber!) && self.appUsersState[contact.PhoneNumber ?? ""] == true{
+                let participant = Participant()
+                participant.user?.username = contact.PhoneNumber
+                
+                self.alarm.participants.append(participant)
+            }
+        }
         
         alarm.participants = inviteList
         

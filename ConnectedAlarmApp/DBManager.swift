@@ -39,6 +39,7 @@ class DBManager {
         let query: PFQuery = PFUser.query()!
         query.findObjectsInBackground { (users: [PFObject]?, error:Error?) in
             if users != nil {
+                
                 sucess(users!)
             }
             if error != nil {
